@@ -48,6 +48,10 @@
 #define BBGLASS    @"Black Beauty Glass.pdf"
 #define BBIRON     @"Black Beauty Iron.pdf"
 
+#define BBORIGINALSPECS @"BBORIGINALSPECS"
+#define BBGLASSSPECS @"BBGLASSSPECS"
+#define BBIRONSPECS @"BBIRONSPECS"
+
 #define SYSTEMVERSION5 @"5.1"
 #define ISIOS5 [UIDevice currentDevice] systemVersion]
 #define SYSTEM_VERSION_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)

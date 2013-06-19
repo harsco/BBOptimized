@@ -28,12 +28,25 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.title = @"BLACK BEAUTY® GLASS";
+    //self.title = @"BLACK BEAUTY® GLASS";
     [self.productInfoWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"grading_glass" ofType:@"html"]isDirectory:NO]]];
     [self.packagingView setText:@"Available in 50lb bags at 60 bags per pallet and Jumbo bags loaded up to 1.5 tons (3,000lbs).  Shrink wrap available."];
     [self.bulletPointsView setText:@"• 100% post-consumer bottle glass                                                                • Less than 1% free silica                                                                                                   • Non-reactive, chemically inert                                                                                             • Uniform density                                                                                                            • Produces white metal surface                                                                                               • Increased visibility & production"];
     
      self.thumbNailImage.image = [UIImage imageNamed:BBGLASSTHUMBS];
+}
+
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont boldSystemFontOfSize:18.0]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"BLACK BEAUTY® GLASS"];
+	[self.navigationController.navigationBar.topItem setTitleView:label];
+	[label release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +61,8 @@
 {
     
     imageFullScreenVC* fullImage = [[imageFullScreenVC alloc] initWIthImage:[UIImage imageNamed:BBGLASSPRODUCTIMAGE]];
-    
+    fullImage.pageTitle = @"BLACK BEAUTY® GLASS";
+
     fullImage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self presentModalViewController:fullImage animated:YES];
@@ -89,6 +103,15 @@
         }
         
     }
+    else if(indexPath.section == 1)
+    {
+        DocumentViewerVC* pdfViewer = [[DocumentViewerVC alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:BBGLASSSPECS ofType:@"pdf"]];
+        [self.navigationController pushViewController:pdfViewer animated:YES];
+        
+        [pdfViewer release];
+    }
+    
+
 
 }
 

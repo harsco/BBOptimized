@@ -82,6 +82,7 @@
     NSIndexPath *tableSelection = [self.locationsListView indexPathForSelectedRow];
     [self.locationsListView deselectRowAtIndexPath:tableSelection animated:NO];
     [self.locationSearchBar resignFirstResponder];
+    [self.mapView setDelegate:self];
     
     if(IsRunningTallPhone())
     {
@@ -93,6 +94,36 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self.mapView setDelegate:nil];
+}
+
+-(void)viewDidUnload
+{
+    self.mapView = nil;
+    self.locationsListView = nil;
+    self.locationSearchBar = nil;
+    
+    RELEASE_TO_NIL(locationsDetails);
+    RELEASE_TO_NIL(annotationArray);
+    RELEASE_TO_NIL(mapAnnotaionsArray);
+    RELEASE_TO_NIL(locManagerObj);
+    RELEASE_TO_NIL(hotLocation);
+}
+
+
+-(void)dealloc
+{
+    [mapView release];
+    [locationsListView release];
+    [locationSearchBar release];
+    
+    RELEASE_TO_NIL(locationsDetails);
+    RELEASE_TO_NIL(annotationArray);
+    RELEASE_TO_NIL(mapAnnotaionsArray);
+    RELEASE_TO_NIL(locManagerObj);
+    RELEASE_TO_NIL(hotLocation);
+    
+    [super dealloc];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -265,7 +296,7 @@
     {
         CLLocationCoordinate2D tempCoordinate = CLLocationCoordinate2DMake([[locationsDetails objectAtIndex:i] Latitude], [[locationsDetails objectAtIndex:i] Longitude]);
         BBStoreAnnotation* annotationView = [[BBStoreAnnotation alloc] initWithLocation:tempCoordinate];
-        annotationView.title = [[locationsDetails objectAtIndex:i] name];
+        annotationView.title = [(Location*)[locationsDetails objectAtIndex:i] name];
         annotationView.subTitle = [[locationsDetails objectAtIndex:i] telephone];
         
         [annotationArray addObject:annotationView];
@@ -411,7 +442,9 @@
     
     else
     {
-        static NSString *BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
+//        BBStoreAnnotation* custAnnotation = (BBStoreAnnotation*)annotation;
+//        NSLog(@"identifier is %@",[custAnnotation title]);
+        NSString *BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
         
         //NSLog(@"annotation");
         
@@ -462,6 +495,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     // here we illustrate how to detect which annotation type was clicked on for its callout
+    NSLog(@"Callout tapped");
     id <MKAnnotation> annotation = [view annotation];
     if ([annotation isKindOfClass:[BBStoreAnnotation class]])
     {

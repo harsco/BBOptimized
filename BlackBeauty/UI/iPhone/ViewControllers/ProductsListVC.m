@@ -48,6 +48,17 @@
 
 }
 
+-(void)viewDidUnload
+{
+    self.headerView = nil;
+}
+
+-(void)dealloc
+{
+    [headerView release];
+    [super dealloc];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

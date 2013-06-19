@@ -61,10 +61,23 @@
     }
 }
 
+
+-(void)viewDidUnload
+{
+    self.faqListView = nil;
+}
+
+-(void)dealloc
+{
+    [faqListView release];
+    [super dealloc];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [faqListView release];
 }
 
 

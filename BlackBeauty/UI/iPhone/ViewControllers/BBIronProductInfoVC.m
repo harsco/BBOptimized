@@ -45,7 +45,8 @@
 {
     
     imageFullScreenVC* fullImage = [[imageFullScreenVC alloc] initWIthImage:[UIImage imageNamed:BBIRONPRODUCTIMAGE]];
-    
+    fullImage.pageTitle = @"BLACK BEAUTY® IRON";
+
     fullImage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self presentModalViewController:fullImage animated:YES];
@@ -86,6 +87,13 @@
             
         }
         
+    }
+    else if(indexPath.section == 1)
+    {
+        DocumentViewerVC* pdfViewer = [[DocumentViewerVC alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:BBIRONSPECS ofType:@"pdf"]];
+        [self.navigationController pushViewController:pdfViewer animated:YES];
+        
+        [pdfViewer release];
     }
 
 }

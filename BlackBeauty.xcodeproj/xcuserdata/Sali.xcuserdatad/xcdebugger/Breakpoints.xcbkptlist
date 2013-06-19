@@ -8,12 +8,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BlackBeauty/UI/iPhone/ViewControllers/locationSearchResultsVC.m"
-         timestampString = "392826475.88459"
+         timestampString = "393332213.279652"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "234"
-         endingLineNumber = "234"
+         startingLineNumber = "265"
+         endingLineNumber = "265"
          landmarkName = "-mapViewDidFailLoadingMap:withError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BlackBeauty/UI/iPhone/ViewControllers/locationSearchResultsVC.m"
+         timestampString = "393332213.279652"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
+         landmarkName = "-dealloc"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "BlackBeauty/UI/iPhone/ViewControllers/BBOriginalProductInfoVC.m"
+         timestampString = "393337812.08005"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
+         landmarkName = "-onImageZoomButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

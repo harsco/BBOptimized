@@ -33,9 +33,9 @@
 //Action methods for different Buttons
 -(IBAction)onFindBBToolClicked:(id)sender;
 -(IBAction)onContactUsClicked:(id)sender;
--(IBAction)onDownloadSpecSheetClicked:(id)sender;
 -(IBAction)onPrivacyButtonClicked:(id)sender;
 -(IBAction)onMSDSClicked:(id)sender;
 -(IBAction)onProfileGuideClicked:(id)sender;
+-(IBAction)onAboutUsClicked:(id)sender;
 
 @end

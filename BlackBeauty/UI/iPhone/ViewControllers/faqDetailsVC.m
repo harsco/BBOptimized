@@ -44,7 +44,7 @@
     
     
     self.faqQuestion.text = faqToBeShown.question;
-    self.title = @"BLACK BEAUTY Help";
+    self.title = @"BLACK BEAUTY® Help";
     
     
 }

@@ -170,7 +170,7 @@ static sqlite3 *database = nil;
 {
      //NSString* sqlQuery = [[NSString alloc] initWithFormat:@"%@%@%@%@%@%@",@"select * from ",PC_POSITIONS,@" where ordernumber = '",order.orderNumber,@"'",@" order by positionint;"];
     
-    NSString* sqlQuery = @"select * from harscolocations order by city";
+    NSString* sqlQuery = @"select * from harscolocations order by zipcode";
     
     NSMutableArray* resultLocations = [[NSMutableArray alloc] init];
     

@@ -44,7 +44,7 @@
     
     //self.navigationController.navigationBar.topItem.leftBarButtonItem.title = @"Products";
     
-    self.title = @" BLACK BEAUTY® GLASS";
+    //self.title = @" BLACK BEAUTY® GLASS";
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -59,6 +59,34 @@
     {
         [self.productsScrollView setFrame:CGRectMake(0.0, 0.0, 320, 460)];
     }
+}
+
+-(void)viewDidUnload
+{
+    self.userOptionsTable = nil;
+    self.productsScrollView = nil;
+    self.bulletPointsView = nil;
+    self.thumbNailImage = nil;
+    self.gradesButton = nil;
+    self.packagingButton = nil;
+    self.imageZoomButton = nil;
+    self.productInfoWebView = nil;
+    self.packagingView = nil;
+}
+
+-(void)dealloc
+{
+    [userOptionsTable release];
+    [productInfoWebView release];
+    [bulletPointsView release];
+    [thumbNailImage release];
+    [gradesButton release];
+    [packagingView release];
+    [imageZoomButton release];
+    [productInfoWebView release];
+    [packagingView release];
+    
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,13 +111,13 @@
 //    
 //    [self.view addSubview:enlargedImageView];
     
-    imageFullScreenVC* fullImage = [[imageFullScreenVC alloc] init];
-    
-    fullImage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
-    [self presentModalViewController:fullImage animated:YES];
-    
-    [fullImage release];
+//    imageFullScreenVC* fullImage = [[imageFullScreenVC alloc] init];
+//    
+//    fullImage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    
+//    [self presentModalViewController:fullImage animated:YES];
+//    
+//    [fullImage release];
     
 }
 
@@ -193,7 +221,7 @@
         
     else
     {
-        cell.optionLabel.text = @"Contact Us/ Order Now";
+        cell.optionLabel.text = @"Contact Us/Order Now";
          cell.optionsIcon.image = [UIImage imageNamed:@"callus"];
     }
         

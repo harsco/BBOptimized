@@ -31,6 +31,16 @@
     // Do any additional setup after loading the view from its nib.
 
 }
+-(void)viewDidUnload
+{
+    self.headerView = nil;
+}
+
+-(void)dealloc
+{
+    [headerView release];
+    [super dealloc];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -146,10 +156,7 @@
     
 }
 
--(IBAction)onDownloadSpecSheetClicked:(id)sender
-{
-    //not implemented yet
-}
+
 
 -(IBAction)onPrivacyButtonClicked:(id)sender
 {

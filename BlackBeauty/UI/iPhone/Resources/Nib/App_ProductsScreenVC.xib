@@ -124,10 +124,6 @@
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">testImage.jpg</string>
-								</object>
 							</object>
 							<object class="IBUITextView" id="728890833">
 								<reference key="NSNextResponder" ref="880161502"/>
@@ -169,6 +165,7 @@ ZHVzdGluZw3igKIgUmVjeWNsYWJsZSANA</string>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{0, 800}, {320, 344}}</string>
 								<reference key="NSSuperview" ref="880161502"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="125309224"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -538,10 +535,10 @@ ZHVzdGluZw3igKIgUmVjeWNsYWJsZSANA</string>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="background_image_iphone_lowres.png">{320, 480}</string>
-			<string key="testImage.jpg">{286, 296}</string>
-		</dictionary>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">background_image_iphone_lowres.png</string>
+			<string key="NS.object.0">{320, 480}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
 </archive>

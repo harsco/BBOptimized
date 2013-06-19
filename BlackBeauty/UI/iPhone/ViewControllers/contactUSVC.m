@@ -185,7 +185,9 @@
     
     cell.textLabel.text = [[contactLocationsArray objectAtIndex:indexPath.row] city];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[[contactLocationsArray objectAtIndex:indexPath.row] city],@", ",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state]] ;
+    //cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[[contactLocationsArray objectAtIndex:indexPath.row] city],@", ",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state]] ;
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state],@",",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] city]] ;
     
     if(indexPath.row%2 != 0)
     {

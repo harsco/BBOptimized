@@ -13,10 +13,15 @@
     UIScrollView* imageScrollView;
     UIImageView* fullSizeImageView;
     UIImage* fullScreenImage;
+    UINavigationBar* header;
+    
+    NSString* pageTitle;
 }
 
 @property(nonatomic,retain)IBOutlet UIScrollView* imageScrollView;
 @property(nonatomic,retain)IBOutlet UIImageView* fullSizeImageView;
+@property(nonatomic,retain)IBOutlet UINavigationBar* header;
+@property(nonatomic,retain)NSString* pageTitle;
 
 -(id)initWIthImage:(UIImage*)image;
 

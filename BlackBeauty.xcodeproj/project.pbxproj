@@ -21,6 +21,9 @@
 		3A255AC8172FD9C70042875F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A255AC7172FD9C70042875F /* LocationManager.m */; };
 		3A255ACA172FD9E90042875F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A255AC9172FD9E90042875F /* CoreLocation.framework */; };
 		3A3B6AE81767384F005270EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B6AE71767384F005270EB /* Default-568h@2x.png */; };
+		3A3B972017705E50004E9A85 /* BBGLASSSPECS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B971D17705E50004E9A85 /* BBGLASSSPECS.pdf */; };
+		3A3B972117705E50004E9A85 /* BBIRONSPECS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B971E17705E50004E9A85 /* BBIRONSPECS.pdf */; };
+		3A3B972217705E50004E9A85 /* BBORIGINALSPECS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B971F17705E50004E9A85 /* BBORIGINALSPECS.pdf */; };
 		3A41190917573118006C1B8B /* callus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4118FD17573118006C1B8B /* callus@2x.png */; };
 		3A41190A17573118006C1B8B /* emailus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4118FE17573118006C1B8B /* emailus.png */; };
 		3A41190B17573118006C1B8B /* emailus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4118FF17573118006C1B8B /* emailus@2x.png */; };
@@ -173,6 +176,9 @@
 		3A255AC7172FD9C70042875F /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = Classes/LocationManager.m; sourceTree = "<group>"; };
 		3A255AC9172FD9E90042875F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3A3B6AE71767384F005270EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3A3B971D17705E50004E9A85 /* BBGLASSSPECS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BBGLASSSPECS.pdf; sourceTree = "<group>"; };
+		3A3B971E17705E50004E9A85 /* BBIRONSPECS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BBIRONSPECS.pdf; sourceTree = "<group>"; };
+		3A3B971F17705E50004E9A85 /* BBORIGINALSPECS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BBORIGINALSPECS.pdf; sourceTree = "<group>"; };
 		3A4118FD17573118006C1B8B /* callus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "callus@2x.png"; path = "UI/iPhone/Resources/images/callus@2x.png"; sourceTree = "<group>"; };
 		3A4118FE17573118006C1B8B /* emailus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emailus.png; path = UI/iPhone/Resources/images/emailus.png; sourceTree = "<group>"; };
 		3A4118FF17573118006C1B8B /* emailus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "emailus@2x.png"; path = "UI/iPhone/Resources/images/emailus@2x.png"; sourceTree = "<group>"; };
@@ -572,6 +578,9 @@
 		3A5E88AF17156DD800C531CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A3B971D17705E50004E9A85 /* BBGLASSSPECS.pdf */,
+				3A3B971E17705E50004E9A85 /* BBIRONSPECS.pdf */,
+				3A3B971F17705E50004E9A85 /* BBORIGINALSPECS.pdf */,
 				3A5EC6BC175DD96400F7C140 /* background.png */,
 				3AB89FE2175CDD5700971558 /* ProfileGuide.pdf */,
 				3A5208F317578856005113A6 /* faq4.html */,
@@ -817,6 +826,9 @@
 				3AB002F01769D7FC001DACEA /* aboutBB.png in Resources */,
 				3A5E26E3176EF9C6005DEC7B /* Default@2x.png in Resources */,
 				3A5E26E7176F47E3005DEC7B /* callus.png in Resources */,
+				3A3B972017705E50004E9A85 /* BBGLASSSPECS.pdf in Resources */,
+				3A3B972117705E50004E9A85 /* BBIRONSPECS.pdf in Resources */,
+				3A3B972217705E50004E9A85 /* BBORIGINALSPECS.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

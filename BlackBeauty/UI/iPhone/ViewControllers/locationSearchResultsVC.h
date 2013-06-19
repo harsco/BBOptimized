@@ -28,7 +28,7 @@
     NSMutableArray* locationsDetails;
     NSMutableArray* annotationArray;
     NSArray* mapAnnotaionsArray;
-    NSArray* locations;
+    
     
     LocationManager* locManagerObj;
     Location* hotLocation;

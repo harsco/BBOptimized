@@ -68,7 +68,7 @@
 {
     if(IsRunningTallPhone())
     {
-        [self.documentViewer setFrame:CGRectMake(0, 0, 320, 568)];
+        [self.documentViewer setFrame:CGRectMake(0, 0, 320, 540)];
     }
     
 

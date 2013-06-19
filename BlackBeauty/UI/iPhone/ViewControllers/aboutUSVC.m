@@ -69,10 +69,36 @@
     }
 }
 
+-(void)viewDidUnload
+{
+    self.aboutUsHeader = nil;
+    self.aboutBBImage = nil;
+    self.aboutUsText = nil;
+    self.backGroundImage = nil;
+    self.aboutUsLabel = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [aboutUsHeader release];
+    [aboutBBImage release];
+    [backGroundImage release];
+    [aboutUsText release];
+    [aboutUsLabel release];
+   
+}
+
+-(void)dealloc
+{
+    [aboutUsHeader release];
+    [aboutBBImage release];
+    [backGroundImage release];
+    [aboutUsText release];
+    [aboutUsLabel release];
+
+    [super dealloc];
 }
 
 #pragma mark Action Methods

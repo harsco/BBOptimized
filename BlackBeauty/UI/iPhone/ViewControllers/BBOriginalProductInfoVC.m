@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.title = @"BLACK BEAUTY";
+    self.title = @"BLACK BEAUTY®";
     self.thumbNailImage.image = [UIImage imageNamed:BBORIGINALTHUMBS];
     [self initVars];
     
@@ -56,7 +56,7 @@
 {
    
     imageFullScreenVC* fullImage = [[imageFullScreenVC alloc] initWIthImage:[UIImage imageNamed:BBORIGINALPRODUCTIMAGE]];
-    
+    fullImage.pageTitle = @"BLACK BEAUTY®";
     fullImage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self presentModalViewController:fullImage animated:YES];
@@ -97,6 +97,14 @@
             }
             
         }
+
+    }
+    else if(indexPath.section == 1)
+    {
+        DocumentViewerVC* pdfViewer = [[DocumentViewerVC alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:BBORIGINALSPECS ofType:@"pdf"]];
+        [self.navigationController pushViewController:pdfViewer animated:YES];
+        
+        [pdfViewer release];
 
     }
     

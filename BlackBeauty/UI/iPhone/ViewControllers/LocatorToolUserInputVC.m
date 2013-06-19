@@ -61,6 +61,13 @@
   
 }
 
+-(void)dealloc
+{
+    [byUserInputLocationButton release];
+    [byUserLocationButton release];
+    [super dealloc];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
