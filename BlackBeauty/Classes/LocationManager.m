@@ -16,6 +16,9 @@
 
 -(void)getResellersNearMYLocation
 {
+    
+    
+    
     if([CLLocationManager locationServicesEnabled] == NO)
     {
         UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. If you proceed, you will be asked to confirm whether location services should be reenabled." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -28,7 +31,12 @@
         }
 
         locationManager.delegate = self;
+        
+        if([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        else
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        
         locationManager.distanceFilter = kCLDistanceFilterNone;
         isLocationFixed = NO;
         [self startLocationTimer];
@@ -45,7 +53,12 @@
         }
         
         locationManager.delegate = self;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        
+        if([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        else
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        
         locationManager.distanceFilter = kCLDistanceFilterNone;
         isLocationFixed = NO;
         [self startLocationTimer];
