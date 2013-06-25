@@ -25,6 +25,9 @@
     NSString* webSite;
     NSString* officeHours;
     NSString* loadingHours;
+    NSString* weekdayHours;
+    NSString* saturdayHours;
+    NSString* sundayHours;
     double distanceFromInterestedLocation;
 }
 
@@ -43,5 +46,9 @@
 @property(nonatomic,retain) NSString* officeHours;
 @property(nonatomic,retain) NSString* loadingHours;
 @property(nonatomic,retain) NSString* webSite;
+@property(nonatomic,retain) NSString* weekdayHours;
+@property(nonatomic,retain) NSString* saturdayHours;
+@property(nonatomic,retain) NSString* sundayHours;
+
 @property(nonatomic) double distanceFromInterestedLocation;
 @end

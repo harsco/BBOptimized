@@ -15,6 +15,7 @@
 #import "StoreHoursVC.h"
 #import "NetworkInterface.h"
 #import "Utilities.h"
+#import "AppStorage.h"
 
 @interface LocationDetailsVC : UIViewController<UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate>
 {

@@ -50,14 +50,8 @@
     
     self.storeName.text = locationToShow.name;
     self.storeStreet.text = locationToShow.streetAddress;
-    self.storeCity.text = [locationToShow.city stringByAppendingFormat:@"%@%@",@", ",locationToShow.stateAndZip];
-    
-
-    
-    
-    
-    
-    //self.storeCity.text = locationToShow.c
+    //self.storeCity.text = [locationToShow.city stringByAppendingFormat:@"%@%@",@", ",locationToShow.stateAndZip];
+    self.storeCity.text = [locationToShow.city stringByAppendingFormat:@"%@%@%@%@",@", ",locationToShow.state,@" ",locationToShow.zipCode];
 }
 
 -(void)viewDidUnload
@@ -214,7 +208,7 @@
            // NSLog(@"number is %@",[NSString stringWithFormat:@"%@%@",@"telprompt://",[telePhone stringByReplacingOccurrencesOfString:@"-" withString:@""]]);
             [[UIApplication sharedApplication] openURL:url];
         } else {
-            UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your device doesn't support this feature." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Call Alert!!" message:@"Your device doesn't have the ability to make a telephone call" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [Notpermitted show];
             [Notpermitted release];
         }
@@ -324,14 +318,23 @@
     
     else if(indexPath.row == 0)
     {
-        if(locationToShow.loadingHours && locationToShow.officeHours)
+        if([locationToShow.name caseInsensitiveCompare:@"Harsco"] == NSOrderedSame)
         {
-           
+            StoreHoursVC* storeHoursVC = [[StoreHoursVC alloc] initWithLocation:[[AppStorage getInstance] getHarscoLocation:locationToShow]];
+            [self.navigationController pushViewController:storeHoursVC animated:YES];
+            [storeHoursVC release];
+        }
+        
+        else
+        {
             NSLog(@"%@%@",locationToShow.officeHours,locationToShow.loadingHours );
             StoreHoursVC* storeHoursVC = [[StoreHoursVC alloc] initWithLocation:locationToShow];
             [self.navigationController pushViewController:storeHoursVC animated:YES];
             [storeHoursVC release];
         }
+        
+           
+        
     }
     
     

@@ -107,7 +107,6 @@
 		3AB7BEFB1733A06800029A68 /* faqVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BEFA1733A06700029A68 /* faqVC.xib */; };
 		3AB7BF001733A1D400029A68 /* aboutUSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB7BEFF1733A1D400029A68 /* aboutUSVC.m */; };
 		3AB7BF021733A1F400029A68 /* aboutUSVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BF011733A1F400029A68 /* aboutUSVC.xib */; };
-		3AB7BF181733F0CB00029A68 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BF171733F0CB00029A68 /* location.db */; };
 		3AB89FB5175C7A5900971558 /* productsnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FB3175C7A5900971558 /* productsnew.png */; };
 		3AB89FB6175C7A5900971558 /* productsnew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FB4175C7A5900971558 /* productsnew@2x.png */; };
 		3AB89FBA175C7C4500971558 /* black beauty glass product photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FB7175C7C4500971558 /* black beauty glass product photo.png */; };
@@ -126,6 +125,8 @@
 		3AB89FDF175CB2A100971558 /* DocumentViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FDE175CB2A000971558 /* DocumentViewerVC.xib */; };
 		3AB89FE1175CDAE700971558 /* ProfileGuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FE0175CDAE600971558 /* ProfileGuideCell.xib */; };
 		3AB89FE3175CDD5700971558 /* ProfileGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FE2175CDD5700971558 /* ProfileGuide.pdf */; };
+		3ABDA55317748381003654BC /* StoreHoursCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDA55217748380003654BC /* StoreHoursCell.xib */; };
+		3ABDA55617748409003654BC /* StoreHoursCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABDA55517748409003654BC /* StoreHoursCell.m */; };
 		3ABDED5B1744E4B2002197B4 /* about us_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED521744E4B2002197B4 /* about us_low.png */; };
 		3ABDED5D1744E4B2002197B4 /* contact us_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED541744E4B2002197B4 /* contact us_low.png */; };
 		3ABDED5E1744E4B2002197B4 /* faq_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED551744E4B2002197B4 /* faq_low.png */; };
@@ -150,6 +151,7 @@
 		3ACDE0FB174BB43E009703A2 /* imageFullScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ACDE0FA174BB43E009703A2 /* imageFullScreenVC.xib */; };
 		3AD1494B174A67DD001CB67A /* App_ProductsScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD14949174A67DD001CB67A /* App_ProductsScreenVC.m */; };
 		3AD1494E174A6833001CB67A /* App_ProductsScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD1494D174A6833001CB67A /* App_ProductsScreenVC.xib */; };
+		3AD5700217788D4300E02E3E /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5700117788D4300E02E3E /* location.db */; };
 		3AF1E8FD173CDED000241C20 /* BBStoreAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1E8FC173CDED000241C20 /* BBStoreAnnotation.m */; };
 /* End PBXBuildFile section */
 
@@ -285,7 +287,6 @@
 		3AB7BEFE1733A1D400029A68 /* aboutUSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aboutUSVC.h; path = UI/iPhone/ViewControllers/aboutUSVC.h; sourceTree = "<group>"; };
 		3AB7BEFF1733A1D400029A68 /* aboutUSVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = aboutUSVC.m; path = UI/iPhone/ViewControllers/aboutUSVC.m; sourceTree = "<group>"; };
 		3AB7BF011733A1F400029A68 /* aboutUSVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = aboutUSVC.xib; path = UI/iPhone/Resources/Nib/aboutUSVC.xib; sourceTree = "<group>"; };
-		3AB7BF171733F0CB00029A68 /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
 		3AB89FB3175C7A5900971558 /* productsnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = productsnew.png; path = UI/iPhone/Resources/images/productsnew.png; sourceTree = "<group>"; };
 		3AB89FB4175C7A5900971558 /* productsnew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "productsnew@2x.png"; path = "UI/iPhone/Resources/images/productsnew@2x.png"; sourceTree = "<group>"; };
 		3AB89FB7175C7C4500971558 /* black beauty glass product photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black beauty glass product photo.png"; path = "UI/iPhone/Resources/images/black beauty glass product photo.png"; sourceTree = "<group>"; };
@@ -310,6 +311,9 @@
 		3AB89FDE175CB2A000971558 /* DocumentViewerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DocumentViewerVC.xib; path = UI/iPhone/Resources/Nib/DocumentViewerVC.xib; sourceTree = "<group>"; };
 		3AB89FE0175CDAE600971558 /* ProfileGuideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileGuideCell.xib; path = UI/iPhone/Resources/Nib/ProfileGuideCell.xib; sourceTree = "<group>"; };
 		3AB89FE2175CDD5700971558 /* ProfileGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ProfileGuide.pdf; sourceTree = "<group>"; };
+		3ABDA55217748380003654BC /* StoreHoursCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StoreHoursCell.xib; path = UI/iPhone/Resources/Nib/StoreHoursCell.xib; sourceTree = "<group>"; };
+		3ABDA55417748409003654BC /* StoreHoursCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreHoursCell.h; path = UI/iPhone/Views/StoreHoursCell.h; sourceTree = "<group>"; };
+		3ABDA55517748409003654BC /* StoreHoursCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreHoursCell.m; path = UI/iPhone/Views/StoreHoursCell.m; sourceTree = "<group>"; };
 		3ABDED521744E4B2002197B4 /* about us_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about us_low.png"; path = "UI/iPhone/Resources/images/Low Res/about us_low.png"; sourceTree = "<group>"; };
 		3ABDED541744E4B2002197B4 /* contact us_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact us_low.png"; path = "UI/iPhone/Resources/images/Low Res/contact us_low.png"; sourceTree = "<group>"; };
 		3ABDED551744E4B2002197B4 /* faq_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = faq_low.png; path = "UI/iPhone/Resources/images/Low Res/faq_low.png"; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 		3AD14948174A67DC001CB67A /* App_ProductsScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = App_ProductsScreenVC.h; path = UI/iPhone/ViewControllers/App_ProductsScreenVC.h; sourceTree = "<group>"; };
 		3AD14949174A67DD001CB67A /* App_ProductsScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = App_ProductsScreenVC.m; path = UI/iPhone/ViewControllers/App_ProductsScreenVC.m; sourceTree = "<group>"; };
 		3AD1494D174A6833001CB67A /* App_ProductsScreenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = App_ProductsScreenVC.xib; path = UI/iPhone/Resources/Nib/App_ProductsScreenVC.xib; sourceTree = "<group>"; };
+		3AD5700117788D4300E02E3E /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
 		3AF1E8FB173CDED000241C20 /* BBStoreAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBStoreAnnotation.h; path = UI/iPhone/Views/BBStoreAnnotation.h; sourceTree = "<group>"; };
 		3AF1E8FC173CDED000241C20 /* BBStoreAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBStoreAnnotation.m; path = UI/iPhone/Views/BBStoreAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -457,6 +462,7 @@
 				3A6E7A4E174CF0D000052941 /* storeResultsTableCell.xib */,
 				3A6DADEC174FA648001959EA /* contactUSCell.xib */,
 				3AB89FE0175CDAE600971558 /* ProfileGuideCell.xib */,
+				3ABDA55217748380003654BC /* StoreHoursCell.xib */,
 			);
 			name = Nib;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 		3A5E88AF17156DD800C531CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AD5700117788D4300E02E3E /* location.db */,
 				3A3B971D17705E50004E9A85 /* BBGLASSSPECS.pdf */,
 				3A3B971E17705E50004E9A85 /* BBIRONSPECS.pdf */,
 				3A3B971F17705E50004E9A85 /* BBORIGINALSPECS.pdf */,
@@ -592,7 +599,6 @@
 				3A8D877117561DBF0015B704 /* grading_iron.html */,
 				3A8D877217561DBF0015B704 /* grading_original.html */,
 				3A8D876F175617840015B704 /* grading_glass.html */,
-				3AB7BF171733F0CB00029A68 /* location.db */,
 				3A5E88B017156DD800C531CA /* BlackBeauty-Info.plist */,
 				3A5E88B117156DD800C531CA /* InfoPlist.strings */,
 				3A5E88B417156DD800C531CA /* main.m */,
@@ -666,6 +672,8 @@
 				3A5A5702174E2EEE00E9DB52 /* UserLocationAnnotation.m */,
 				3A6DADEE174FA671001959EA /* contactUSCell.h */,
 				3A6DADEF174FA671001959EA /* contactUSCell.m */,
+				3ABDA55417748409003654BC /* StoreHoursCell.h */,
+				3ABDA55517748409003654BC /* StoreHoursCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -745,7 +753,6 @@
 				3AB7BEE41733962900029A68 /* launch image_iphone_metal_high res.png in Resources */,
 				3AB7BEFB1733A06800029A68 /* faqVC.xib in Resources */,
 				3AB7BF021733A1F400029A68 /* aboutUSVC.xib in Resources */,
-				3AB7BF181733F0CB00029A68 /* location.db in Resources */,
 				3A1804841737DC010042D3FD /* LocatorToolUserInputVC.xib in Resources */,
 				3ABDED5B1744E4B2002197B4 /* about us_low.png in Resources */,
 				3ABDED5D1744E4B2002197B4 /* contact us_low.png in Resources */,
@@ -829,6 +836,8 @@
 				3A3B972017705E50004E9A85 /* BBGLASSSPECS.pdf in Resources */,
 				3A3B972117705E50004E9A85 /* BBIRONSPECS.pdf in Resources */,
 				3A3B972217705E50004E9A85 /* BBORIGINALSPECS.pdf in Resources */,
+				3ABDA55317748381003654BC /* StoreHoursCell.xib in Resources */,
+				3AD5700217788D4300E02E3E /* location.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +885,7 @@
 				3A987DE11761CA5E006D5750 /* NetworkInterface.m in Sources */,
 				3A987DE21761CA5E006D5750 /* Reachability.m in Sources */,
 				3A4EF34417660D94009E165A /* StoreHoursVC.m in Sources */,
+				3ABDA55617748409003654BC /* StoreHoursCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

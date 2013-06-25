@@ -23,5 +23,6 @@
 
 -(NSMutableArray*)getAllLocations;
 -(NSMutableArray*)getResellersNearMe:(Location*)userLocation;   //function which computes nearest locations
+-(Location*)getHarscoLocation:(Location*)location;
 
 @end
