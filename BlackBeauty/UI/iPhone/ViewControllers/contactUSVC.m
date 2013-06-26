@@ -102,7 +102,7 @@
 {
     MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
     
-    [mailController setSubject:@"Black Beauty"];
+    [mailController setSubject:@"From BLACK BEAUTY® App"];
     // [mailController setMessageBody:@"my message" isHTML:NO];
     [mailController setToRecipients:[NSArray arrayWithObjects:DEFAULT_EMAIL, nil]];
     
