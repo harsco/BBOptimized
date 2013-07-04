@@ -2,18 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationUsageDescription</key>
-	<string>We need Your Location to accurately fetch the Locations of Black Beauty Stores/Plants near You</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>BBAbrasives</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>app_icon_iphone_lowres_new.png</string>
-		<string>app_icon_iphone_highres_new.png</string>
+		<string>app_icon_iphone_low-res.png</string>
+		<string>app_icon_iphone_high-res.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -21,8 +19,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>app_icon_iphone_lowres_new.png</string>
-				<string>app_icon_iphone_highres_new.png</string>
+				<string>app_icon_iphone_low-res.png</string>
+				<string>app_icon_iphone_high-res.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -42,6 +40,8 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationUsageDescription</key>
+	<string>We need Your Location to accurately fetch the Locations of Black Beauty Stores/Plants near You</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>location-services</string>

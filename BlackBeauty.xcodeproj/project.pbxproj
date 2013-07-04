@@ -14,13 +14,11 @@
 		3A255AAC172FB1830042875F /* HomeScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AAB172FB1830042875F /* HomeScreenVC.xib */; };
 		3A255AAF172FB2070042875F /* list_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AAD172FB2070042875F /* list_item_bg.png */; };
 		3A255AB0172FB2070042875F /* list_item_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AAE172FB2070042875F /* list_item_bg@2x.png */; };
-		3A255AB9172FC3640042875F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AB1172FC08E0042875F /* Default.png */; };
 		3A255AC0172FCE2B0042875F /* AppStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A255ABF172FCE2B0042875F /* AppStorage.m */; };
 		3A255AC2172FCEC10042875F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A255AC1172FCEC10042875F /* libsqlite3.0.dylib */; };
 		3A255AC5172FCFC30042875F /* ConstantDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A255AC4172FCFC30042875F /* ConstantDefines.m */; };
 		3A255AC8172FD9C70042875F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A255AC7172FD9C70042875F /* LocationManager.m */; };
 		3A255ACA172FD9E90042875F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A255AC9172FD9E90042875F /* CoreLocation.framework */; };
-		3A3B6AE81767384F005270EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B6AE71767384F005270EB /* Default-568h@2x.png */; };
 		3A3B972017705E50004E9A85 /* BBGLASSSPECS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B971D17705E50004E9A85 /* BBGLASSSPECS.pdf */; };
 		3A3B972117705E50004E9A85 /* BBIRONSPECS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B971E17705E50004E9A85 /* BBIRONSPECS.pdf */; };
 		3A3B972217705E50004E9A85 /* BBORIGINALSPECS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B971F17705E50004E9A85 /* BBORIGINALSPECS.pdf */; };
@@ -52,7 +50,6 @@
 		3A5208F817578857005113A6 /* faq6.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A5208F517578857005113A6 /* faq6.html */; };
 		3A532427177B3054009E1C54 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = 3A532426177B3054009E1C54 /* location.db */; };
 		3A5A5703174E2EEE00E9DB52 /* UserLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A5702174E2EEE00E9DB52 /* UserLocationAnnotation.m */; };
-		3A5E26E3176EF9C6005DEC7B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AB3172FC09B0042875F /* Default@2x.png */; };
 		3A5E26E7176F47E3005DEC7B /* callus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E26E6176F47D6005DEC7B /* callus.png */; };
 		3A5E88A917156DD800C531CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5E88A817156DD800C531CA /* UIKit.framework */; };
 		3A5E88AB17156DD800C531CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5E88AA17156DD800C531CA /* Foundation.framework */; };
@@ -100,6 +97,17 @@
 		3A987DE61761CBB5006D5750 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A987DE51761CBB4006D5750 /* CFNetwork.framework */; };
 		3AA5DFEB1732A0B90002E657 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5DFEA1732A0B90002E657 /* Location.m */; };
 		3AB002F01769D7FC001DACEA /* aboutBB.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB002EF1769D7FC001DACEA /* aboutBB.png */; };
+		3AB03585178559F60077C0B4 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB03583178559F60077C0B4 /* back-button.png */; };
+		3AB03586178559F60077C0B4 /* back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB03584178559F60077C0B4 /* back-button@2x.png */; };
+		3AB0358717855BB00077C0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AB1172FC08E0042875F /* Default.png */; };
+		3AB0358817855BBB0077C0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A255AB3172FC09B0042875F /* Default@2x.png */; };
+		3AB0358917855BC30077C0B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B6AE71767384F005270EB /* Default-568h@2x.png */; };
+		3AB0358B17855BE80077C0B4 /* app_icon_iphone_low-res.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0358A17855BE80077C0B4 /* app_icon_iphone_low-res.png */; };
+		3AB0358D17855BEF0077C0B4 /* app_icon_iphone_high-res.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0358C17855BEF0077C0B4 /* app_icon_iphone_high-res.png */; };
+		3AB0359317855E610077C0B4 /* about-harsco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359217855E610077C0B4 /* about-harsco@2x.png */; };
+		3AB0359517855E9C0077C0B4 /* about-harsco-2-high-res.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359417855E9C0077C0B4 /* about-harsco-2-high-res.png */; };
+		3AB0359817855F970077C0B4 /* zoom.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359617855F970077C0B4 /* zoom.png */; };
+		3AB0359917855F970077C0B4 /* zoom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359717855F970077C0B4 /* zoom@2x.png */; };
 		3AB7BEC71733961A00029A68 /* background_image_iphone_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BEBB1733961A00029A68 /* background_image_iphone_lowres.png */; };
 		3AB7BECB1733961A00029A68 /* launch image_iphone_metal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BEBF1733961A00029A68 /* launch image_iphone_metal.png */; };
 		3AB7BEE01733962900029A68 /* background_image_iphone_lowres@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BED31733962900029A68 /* background_image_iphone_lowres@2x.png */; };
@@ -113,8 +121,6 @@
 		3AB89FBA175C7C4500971558 /* black beauty glass product photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FB7175C7C4500971558 /* black beauty glass product photo.png */; };
 		3AB89FBB175C7C4500971558 /* black beauty iron product photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FB8175C7C4500971558 /* black beauty iron product photo.png */; };
 		3AB89FBC175C7C4500971558 /* black beauty product photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FB9175C7C4500971558 /* black beauty product photo.png */; };
-		3AB89FBE175C805700971558 /* app_icon_iphone_lowres_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FBD175C805700971558 /* app_icon_iphone_lowres_new.png */; };
-		3AB89FC0175C806100971558 /* app_icon_iphone_highres_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FBF175C806100971558 /* app_icon_iphone_highres_new.png */; };
 		3AB89FC4175C884400971558 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB89FC2175C884300971558 /* MapViewController.m */; };
 		3AB89FC7175C886E00971558 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FC6175C886E00971558 /* MapViewController.xib */; };
 		3AB89FCB175C9FF200971558 /* MSDSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB89FC9175C9FF000971558 /* MSDSVC.m */; };
@@ -278,6 +284,14 @@
 		3AA5DFE91732A0B80002E657 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Classes/Location.h; sourceTree = "<group>"; };
 		3AA5DFEA1732A0B90002E657 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Classes/Location.m; sourceTree = "<group>"; };
 		3AB002EF1769D7FC001DACEA /* aboutBB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutBB.png; path = UI/iPhone/Resources/images/aboutBB.png; sourceTree = "<group>"; };
+		3AB03583178559F60077C0B4 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button.png"; path = "UI/iPhone/Resources/images/back-button.png"; sourceTree = "<group>"; };
+		3AB03584178559F60077C0B4 /* back-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back-button@2x.png"; path = "UI/iPhone/Resources/images/back-button@2x.png"; sourceTree = "<group>"; };
+		3AB0358A17855BE80077C0B4 /* app_icon_iphone_low-res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_iphone_low-res.png"; sourceTree = "<group>"; };
+		3AB0358C17855BEF0077C0B4 /* app_icon_iphone_high-res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_iphone_high-res.png"; sourceTree = "<group>"; };
+		3AB0359217855E610077C0B4 /* about-harsco@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-harsco@2x.png"; path = "UI/iPhone/Resources/images/about-harsco@2x.png"; sourceTree = "<group>"; };
+		3AB0359417855E9C0077C0B4 /* about-harsco-2-high-res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-harsco-2-high-res.png"; path = "UI/iPhone/Resources/images/about-harsco-2-high-res.png"; sourceTree = "<group>"; };
+		3AB0359617855F970077C0B4 /* zoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoom.png; path = UI/iPhone/Resources/images/zoom.png; sourceTree = "<group>"; };
+		3AB0359717855F970077C0B4 /* zoom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zoom@2x.png"; path = "UI/iPhone/Resources/images/zoom@2x.png"; sourceTree = "<group>"; };
 		3AB7BEBB1733961A00029A68 /* background_image_iphone_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_image_iphone_lowres.png; path = "UI/iPhone/Resources/images/Low Res/background_image_iphone_lowres.png"; sourceTree = "<group>"; };
 		3AB7BEBF1733961A00029A68 /* launch image_iphone_metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch image_iphone_metal.png"; path = "UI/iPhone/Resources/images/Low Res/launch image_iphone_metal.png"; sourceTree = "<group>"; };
 		3AB7BED31733962900029A68 /* background_image_iphone_lowres@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_image_iphone_lowres@2x.png"; path = "UI/iPhone/Resources/images/High Res/background_image_iphone_lowres@2x.png"; sourceTree = "<group>"; };
@@ -470,6 +484,12 @@
 		3A255AA0172FACA90042875F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3AB0359617855F970077C0B4 /* zoom.png */,
+				3AB0359717855F970077C0B4 /* zoom@2x.png */,
+				3AB0359417855E9C0077C0B4 /* about-harsco-2-high-res.png */,
+				3AB0359217855E610077C0B4 /* about-harsco@2x.png */,
+				3AB03583178559F60077C0B4 /* back-button.png */,
+				3AB03584178559F60077C0B4 /* back-button@2x.png */,
 				3A5E26E6176F47D6005DEC7B /* callus.png */,
 				3AB002EF1769D7FC001DACEA /* aboutBB.png */,
 				3A0C10E017676EC000BA7DB3 /* msds_download@2x.png */,
@@ -527,6 +547,8 @@
 		3A5E889C17156DD800C531CA = {
 			isa = PBXGroup;
 			children = (
+				3AB0358C17855BEF0077C0B4 /* app_icon_iphone_high-res.png */,
+				3AB0358A17855BE80077C0B4 /* app_icon_iphone_low-res.png */,
 				3A3B6AE71767384F005270EB /* Default-568h@2x.png */,
 				3AB89FBF175C806100971558 /* app_icon_iphone_highres_new.png */,
 				3AB89FBD175C805700971558 /* app_icon_iphone_lowres_new.png */,
@@ -746,7 +768,6 @@
 				3A255AAC172FB1830042875F /* HomeScreenVC.xib in Resources */,
 				3A255AAF172FB2070042875F /* list_item_bg.png in Resources */,
 				3A255AB0172FB2070042875F /* list_item_bg@2x.png in Resources */,
-				3A255AB9172FC3640042875F /* Default.png in Resources */,
 				3AB7BEC71733961A00029A68 /* background_image_iphone_lowres.png in Resources */,
 				3AB7BECB1733961A00029A68 /* launch image_iphone_metal.png in Resources */,
 				3AB7BEE01733962900029A68 /* background_image_iphone_lowres@2x.png in Resources */,
@@ -815,8 +836,6 @@
 				3AB89FBA175C7C4500971558 /* black beauty glass product photo.png in Resources */,
 				3AB89FBB175C7C4500971558 /* black beauty iron product photo.png in Resources */,
 				3AB89FBC175C7C4500971558 /* black beauty product photo.png in Resources */,
-				3AB89FBE175C805700971558 /* app_icon_iphone_lowres_new.png in Resources */,
-				3AB89FC0175C806100971558 /* app_icon_iphone_highres_new.png in Resources */,
 				3AB89FC7175C886E00971558 /* MapViewController.xib in Resources */,
 				3AB89FCE175CA02700971558 /* MSDSVC.xib in Resources */,
 				3AB89FDF175CB2A100971558 /* DocumentViewerVC.xib in Resources */,
@@ -828,16 +847,25 @@
 				3A4EF33E1765B534009E165A /* original_thumbs.png in Resources */,
 				3A4EF3401765B9A3009E165A /* about_harsco.png in Resources */,
 				3A4EF34717660DCF009E165A /* StoreHoursVC.xib in Resources */,
-				3A3B6AE81767384F005270EB /* Default-568h@2x.png in Resources */,
 				3A0C10E117676EC000BA7DB3 /* msds_download@2x.png in Resources */,
 				3AB002F01769D7FC001DACEA /* aboutBB.png in Resources */,
-				3A5E26E3176EF9C6005DEC7B /* Default@2x.png in Resources */,
 				3A5E26E7176F47E3005DEC7B /* callus.png in Resources */,
 				3A3B972017705E50004E9A85 /* BBGLASSSPECS.pdf in Resources */,
 				3A3B972117705E50004E9A85 /* BBIRONSPECS.pdf in Resources */,
 				3A3B972217705E50004E9A85 /* BBORIGINALSPECS.pdf in Resources */,
 				3ABDA55317748381003654BC /* StoreHoursCell.xib in Resources */,
 				3A532427177B3054009E1C54 /* location.db in Resources */,
+				3AB03585178559F60077C0B4 /* back-button.png in Resources */,
+				3AB03586178559F60077C0B4 /* back-button@2x.png in Resources */,
+				3AB0358717855BB00077C0B4 /* Default.png in Resources */,
+				3AB0358817855BBB0077C0B4 /* Default@2x.png in Resources */,
+				3AB0358917855BC30077C0B4 /* Default-568h@2x.png in Resources */,
+				3AB0358B17855BE80077C0B4 /* app_icon_iphone_low-res.png in Resources */,
+				3AB0358D17855BEF0077C0B4 /* app_icon_iphone_high-res.png in Resources */,
+				3AB0359317855E610077C0B4 /* about-harsco@2x.png in Resources */,
+				3AB0359517855E9C0077C0B4 /* about-harsco-2-high-res.png in Resources */,
+				3AB0359817855F970077C0B4 /* zoom.png in Resources */,
+				3AB0359917855F970077C0B4 /* zoom@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,7 +1010,7 @@
 				GCC_PREFIX_HEADER = "BlackBeauty/BlackBeauty-Prefix.pch";
 				INFOPLIST_FILE = "BlackBeauty/BlackBeauty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlackBeauty;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -995,7 +1023,7 @@
 				GCC_PREFIX_HEADER = "BlackBeauty/BlackBeauty-Prefix.pch";
 				INFOPLIST_FILE = "BlackBeauty/BlackBeauty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlackBeauty;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

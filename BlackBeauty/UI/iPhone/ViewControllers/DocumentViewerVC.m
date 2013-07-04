@@ -45,8 +45,13 @@
     if(isProfileGuide)
     {
         self.title = @"Profile Guide";
-        UIImage* image = [UIImage imageNamed:@"grid"];
-        CGRect frameimg = CGRectMake(0, 0, 25, 25);
+        UIImage* image = [UIImage imageNamed:@"back-button"];
+        CGRect frameimg;
+        
+        if(IS_RETINA)
+            frameimg = CGRectMake(0, 0, 30, 30);
+        else
+            frameimg = CGRectMake(0, 0, 25, 25);
         
         UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
         [button setBackgroundImage:image forState:UIControlStateNormal];

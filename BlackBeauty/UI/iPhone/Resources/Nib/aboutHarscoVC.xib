@@ -58,6 +58,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{9, 175}, {302, 256}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -123,7 +124,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">about_harsco.png</string>
+							<string key="NSResourceName">about-harsco-2-high-res.png</string>
 						</object>
 					</object>
 				</array>
@@ -280,7 +281,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="about_harsco.png">{300, 100}</string>
+			<string key="about-harsco-2-high-res.png">{310, 100}</string>
 			<string key="background_image_iphone_lowres.png">{320, 480}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
