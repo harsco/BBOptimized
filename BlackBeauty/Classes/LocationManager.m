@@ -232,6 +232,8 @@
         [delegate didFailToGetDesiredLocations:LOCATIONACCESSDENIED];
         else if([error code] == kCLErrorLocationUnknown)
             [delegate didFailToGetDesiredLocations:UNKNOWNLOCATION];
+        else
+            [delegate didFailToGetDesiredLocations:GENERICERROR];
     }
 }
 
@@ -255,7 +257,20 @@
             
             NSLog(@"placemarks is %@",placemark.locality);
             
-             [self updateLocationsSetToUI];
+            if([placemark.ISOcountryCode isEqualToString:@"US"])
+            {
+                [self updateLocationsSetToUI];
+            }
+            else
+            {
+                if(delegate && [delegate respondsToSelector:@selector(didFailToGetDesiredLocations:)])
+                {
+                    [delegate didFailToGetDesiredLocations:LOCATIONNOTSUPPORTED];
+                }
+            }
+            
+            
+            
             
         }
     }];
@@ -369,36 +384,39 @@
                              CLLocation *location = placemark.location;
                              CLLocationCoordinate2D coordinate = location.coordinate;
                              NSLog(@"%f%f", coordinate.latitude,coordinate.longitude);
+                             NSLog(@"country code is %@",placemark.ISOcountryCode);
                              
                              
-                             if((coordinate.latitude < 18.000 || coordinate.latitude > 48.987386) || (coordinate.longitude < -124.626080 || coordinate.longitude > -62.361014) )
-                             {
-                                 
-                                 NSString* errorString = @"Please Select a location in US"; 
-                                 if(delegate && [delegate respondsToSelector:@selector(didFailToGetDesiredLocations:)])
+                                 if((coordinate.latitude < 18.000 || coordinate.latitude > 48.987386) || (coordinate.longitude < -124.626080 || coordinate.longitude > -62.361014) )
                                  {
-                                     [delegate didFailToGetDesiredLocations:errorString];
+                                     
+                                     NSString* errorString = @"Please Select a location in US";
+                                     if(delegate && [delegate respondsToSelector:@selector(didFailToGetDesiredLocations:)])
+                                     {
+                                         [delegate didFailToGetDesiredLocations:errorString];
+                                     }
                                  }
-                             }
-                             
-                             else{
                                  
-                                 locationDesired.Latitude = coordinate.latitude;
-                                 locationDesired.Longitude = coordinate.longitude;
-                                 locationDesired.name = placemark.locality;
-//                                 NSLog(@"name is %@", locationDesired.name);
-//                                 NSLog(@"placemark.ISOcountryCode %@",placemark.ISOcountryCode);
-//                                 NSLog(@"placemark.country %@",placemark.country);
-//                                 NSLog(@"placemark.locality %@",placemark.locality);
-//                                 NSLog(@"placemark.administrativeArea %@",placemark.administrativeArea);
-//                                 NSLog(@"placemark.subadmin %@",placemark.subAdministrativeArea);
-//                                 NSLog(@"placemark.subLocality %@",placemark.subLocality);
-//                                 NSLog(@"placemark.subThoroughfare %@",placemark.subThoroughfare);
-                                 
-                                 [self updateLocationsSetToUI];
+                                 else{
+                                     
+                                     locationDesired.Latitude = coordinate.latitude;
+                                     locationDesired.Longitude = coordinate.longitude;
+                                     locationDesired.name = placemark.locality;
+                                     //                                 NSLog(@"name is %@", locationDesired.name);
+                                     //                                 NSLog(@"placemark.ISOcountryCode %@",placemark.ISOcountryCode);
+                                     //                                 NSLog(@"placemark.country %@",placemark.country);
+                                     //                                 NSLog(@"placemark.locality %@",placemark.locality);
+                                     //                                 NSLog(@"placemark.administrativeArea %@",placemark.administrativeArea);
+                                     //                                 NSLog(@"placemark.subadmin %@",placemark.subAdministrativeArea);
+                                     //                                 NSLog(@"placemark.subLocality %@",placemark.subLocality);
+                                     //                                 NSLog(@"placemark.subThoroughfare %@",placemark.subThoroughfare);
+                                     
+                                     [self updateLocationsSetToUI];
+                                     
+                                     
+                                 }
 
-                                 
-                             }
+                             
                              
                                                          
                          }

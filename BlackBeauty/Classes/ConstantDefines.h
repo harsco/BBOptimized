@@ -61,6 +61,7 @@
 #define LOCATIONACCESSDENIED @"Location Services access denied. Please enable Location Services for the App in Settings"
 #define UNKNOWNLOCATION @"Your current Location currently unknown"
 #define GENERICERROR @"Unable to determine your current Location..Please enter your Location (if Known) in the search box and press search key"
+#define LOCATIONNOTSUPPORTED @"Unable To Determine Stores Near You.. Please enter a location in US and Search.."
 //uncomment only if you are a developer
 //#define DEVELOPMENT 1
 
