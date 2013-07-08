@@ -87,7 +87,7 @@
 #pragma mark Action Methods
 -(void)onBackClick:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)onMSDSDownloadClicked:(UIButton*)sender

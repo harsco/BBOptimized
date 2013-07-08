@@ -109,7 +109,8 @@
 #pragma mark Action Methods
 -(void)onBackClick:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)onAboutHarscoClicked:(id)sender

@@ -62,7 +62,8 @@
     
     rootNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    [self presentModalViewController:rootNavigationController animated:YES];
+    //[self presentModalViewController:rootNavigationController animated:YES];
+    [self presentViewController:rootNavigationController animated:YES completion:nil];
     
     [userInputVC release];
     
@@ -75,7 +76,7 @@
     
     rootNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    [self presentModalViewController:rootNavigationController animated:YES];
+    [self presentViewController:rootNavigationController animated:YES completion:nil];
     
     [testContact release];
     
@@ -91,7 +92,7 @@
     
     rootNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    [self presentModalViewController:rootNavigationController animated:YES];
+    [self presentViewController:rootNavigationController animated:YES completion:nil];
     
     [productsScreen release];
     [rootNavigationController release];
@@ -102,7 +103,7 @@
     aboutUSVC* aboutUsScreen = [[aboutUSVC alloc] init];
     //rootNavigationController = [[UINavigationController alloc] initWithRootViewController:aboutUsScreen];
     aboutUsScreen.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentModalViewController:aboutUsScreen animated:YES];
+    [self presentViewController:rootNavigationController animated:YES completion:nil];
     
     [aboutUsScreen release];
   

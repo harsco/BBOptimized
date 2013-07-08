@@ -82,7 +82,8 @@
 #pragma mark Action Methods
 -(void)onBackClick:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)onCallUsClicked:(id)sender
@@ -97,7 +98,7 @@
         // NSLog(@"number is %@",[NSString stringWithFormat:@"%@%@",@"telprompt://",[telePhone stringByReplacingOccurrencesOfString:@"-" withString:@""]]);
         [[UIApplication sharedApplication] openURL:url];
     } else {
-        UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your device doesn't support this feature." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Call Alert" message:@"Your device doesn't support a telephone call" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [Notpermitted show];
         [Notpermitted release];
     }
@@ -116,7 +117,8 @@
     
     if ( mailController != nil ) {
         if ([MFMailComposeViewController canSendMail]){
-            [self presentModalViewController:mailController animated:YES];
+            //[self presentModalViewController:mailController animated:YES];
+            [self presentViewController:mailController animated:YES completion:nil];
         }
         else{
             //throw error
@@ -133,7 +135,8 @@
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     
-    [controller dismissModalViewControllerAnimated:YES];
+    //[controller dismissModalViewControllerAnimated:YES];
+    [controller dismissViewControllerAnimated:YES completion:nil];
     
 }
 

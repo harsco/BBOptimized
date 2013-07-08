@@ -59,7 +59,8 @@
     fullImage.pageTitle = @"BLACK BEAUTY®";
     fullImage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
-    [self presentModalViewController:fullImage animated:YES];
+    //[self presentModalViewController:fullImage animated:YES];
+    [self presentViewController:fullImage animated:YES completion:nil];
     
     [fullImage release];
     

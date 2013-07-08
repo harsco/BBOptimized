@@ -111,7 +111,7 @@
 #pragma mark Action Methods
 -(void)onBackClick:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)onActionClicked:(id)sender
@@ -146,7 +146,8 @@
          
          if ( mailController != nil ) {
          if ([MFMailComposeViewController canSendMail]){
-         [self presentModalViewController:mailController animated:YES];
+         //[self presentModalViewController:mailController animated:YES];
+             [self presentViewController:mailController animated:YES completion:nil];
          }
          else{
          //throw error
@@ -191,8 +192,8 @@
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     
-    [controller dismissModalViewControllerAnimated:YES];
     
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
