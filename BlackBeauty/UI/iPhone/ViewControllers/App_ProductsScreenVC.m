@@ -13,7 +13,7 @@
 @end
 
 @implementation App_ProductsScreenVC
-@synthesize productsScrollView,bulletPointsView,thumbNailImage,gradesButton,packagingButton,userOptionsTable,imageZoomButton,productInfoWebView,packagingView;
+@synthesize productsScrollView,bulletPointsView,thumbNailImage,gradesButton,packagingButton,userOptionsTable,imageZoomButton,productInfoWebView,packagingView,thumbsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -142,6 +142,8 @@
     [self.productInfoWebView setHidden:NO];
     
     [self.packagingButton setBackgroundColor:[UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1]];
+    
+    
     [self.gradesButton setBackgroundColor:[UIColor whiteColor]];
     
     self.packagingButton.titleLabel.textColor = [UIColor whiteColor];
@@ -161,7 +163,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 
 {
-    // NSLog(@"array count is %d",[dataSourceArray count]);
+    // //NSLog(@"array count is %d",[dataSourceArray count]);
     return 1;
 }
 

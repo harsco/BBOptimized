@@ -191,7 +191,7 @@
 #pragma mark Search Bar Methods
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 {
-    // NSLog(@"text is %@",searchBar.text);
+    // //NSLog(@"text is %@",searchBar.text);
     
     if([[NetworkInterface getInstance] isInternetAvailable])
     {
@@ -271,7 +271,7 @@
     
     //for new method
     
-  //  NSLog(@"count of annotations is %d",[annotationArray count]);
+  //  //NSLog(@"count of annotations is %d",[annotationArray count]);
     
     
     if(annotationArray)
@@ -334,7 +334,7 @@
     [self.mapView setDelegate:self];
     [self.mapView setRegion:region animated:YES];
     
-    // NSLog(@"count of annotations is %d",[annotationArray count]);
+    // //NSLog(@"count of annotations is %d",[annotationArray count]);
     
     mapAnnotaionsArray = [[NSArray alloc] initWithArray:annotationArray];
     
@@ -370,7 +370,7 @@
     [annotationArray addObject:userLocationAnnotation];
     [userLocationAnnotation release];
     
-    //NSLog(@"telephone is %@",hotLocation.name);
+    ////NSLog(@"telephone is %@",hotLocation.name);
    
     for(int i=0;i<[locationsDetails count];i++)
     {
@@ -403,7 +403,7 @@
     {
         static NSString *UserAnnotationIdentifier = @"userAnnotationIdentifier";
         
-        //NSLog(@"annotation");
+        ////NSLog(@"annotation");
         
         MKPinAnnotationView *pinView =
         (MKPinAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:UserAnnotationIdentifier];
@@ -443,10 +443,10 @@
     else
     {
 //        BBStoreAnnotation* custAnnotation = (BBStoreAnnotation*)annotation;
-//        NSLog(@"identifier is %@",[custAnnotation title]);
+//        //NSLog(@"identifier is %@",[custAnnotation title]);
         NSString *BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
         
-        //NSLog(@"annotation");
+        ////NSLog(@"annotation");
         
         MKPinAnnotationView *pinView =
         (MKPinAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:BridgeAnnotationIdentifier];
@@ -495,25 +495,25 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     // here we illustrate how to detect which annotation type was clicked on for its callout
-    NSLog(@"Callout tapped");
+    //NSLog(@"Callout tapped");
     id <MKAnnotation> annotation = [view annotation];
     if ([annotation isKindOfClass:[BBStoreAnnotation class]])
     {
-       // NSLog(@"clicked Golden Gate Bridge annotation");
+       // //NSLog(@"clicked Golden Gate Bridge annotation");
         
         
         
         ///if([annotation isEqual:[annotationArray inde]])
     }
     
-    NSLog(@"%d index is ",[annotationArray indexOfObject:annotation]);
+    //NSLog(@"%d index is ",[annotationArray indexOfObject:annotation]);
     
     NSUInteger indexOfAnnotation = [annotationArray indexOfObject:annotation];
     
     if(indexOfAnnotation == NSNotFound)
     {
         //throw error
-        NSLog(@"error");
+        //NSLog(@"error");
     }
     else
     {
@@ -534,7 +534,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //NSLog(@"count is %d",[locationsDetails count]);
+    ////NSLog(@"count is %d",[locationsDetails count]);
     return [locationsDetails count];
 }
 
@@ -579,7 +579,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"selected Cell");
+    //NSLog(@"selected Cell");
     //[tableView deselectRowAtIndexPath:indexPath animated:YES];
     LocationDetailsVC* detailsVC = [[LocationDetailsVC alloc] initWithLocation:[locationsDetails objectAtIndex:indexPath.row]];
     
@@ -605,7 +605,7 @@
 
 -(void)didGetDesiredLocations:(NSMutableArray *)desiredLocationsArray nearLocation:(Location *)location
 {
-    NSLog(@"didGetDesiredLocations count is %d",[desiredLocationsArray count]);
+    //NSLog(@"didGetDesiredLocations count is %d",[desiredLocationsArray count]);
     hotLocation = [location retain];
     
     [fetchingResultsAlert dismissWithClickedButtonIndex:0 animated:YES];

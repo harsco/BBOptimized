@@ -114,7 +114,7 @@
         //NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",@"telprompt://",strippedNumber]];
         NSURL *url = [NSURL URLWithString:@"telprompt://18887333646"];
         
-        // NSLog(@"number is %@",[NSString stringWithFormat:@"%@%@",@"telprompt://",[telePhone stringByReplacingOccurrencesOfString:@"-" withString:@""]]);
+        // //NSLog(@"number is %@",[NSString stringWithFormat:@"%@%@",@"telprompt://",[telePhone stringByReplacingOccurrencesOfString:@"-" withString:@""]]);
         [[UIApplication sharedApplication] openURL:url];
     } else {
         UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Call Alert" message:@"Your device doesn't support a telephone call" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

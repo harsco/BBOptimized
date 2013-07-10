@@ -43,7 +43,7 @@ static sqlite3 *database = nil;
 	NSString *documentsDir = [[paths objectAtIndex:0] stringByAppendingPathComponent:LOCATIONSDB];
     
     
-    NSLog(@"AppStorage::initVars:db path is %@",documentsDir);
+    //NSLog(@"AppStorage::initVars:db path is %@",documentsDir);
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError* error;
@@ -52,11 +52,11 @@ static sqlite3 *database = nil;
 	if(![fileManager fileExistsAtPath:documentsDir])
     {
         NSString *defaultAppPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:LOCATIONSDB];
-        NSLog(@"AppStorage::initVars:path is %@",defaultAppPath);
+        //NSLog(@"AppStorage::initVars:path is %@",defaultAppPath);
         
         if(! [fileManager copyItemAtPath:defaultAppPath toPath:documentsDir error:&error])
         {
-            NSLog(@"error is %@",[error localizedDescription]);
+            //NSLog(@"error is %@",[error localizedDescription]);
             return NO;
         }
     }
@@ -65,7 +65,7 @@ static sqlite3 *database = nil;
     if (sqlite3_open([documentsDir UTF8String], &database) == SQLITE_OK)
     {
         
-        NSLog(@"AppStorage::initVars: Successfully opened the Database");
+        //NSLog(@"AppStorage::initVars: Successfully opened the Database");
         
         //prepare the function for calculating the distances
         
@@ -91,7 +91,7 @@ static sqlite3 *database = nil;
     NSMutableArray* resultLocations = [[NSMutableArray alloc] init];
     
     
-  //  NSLog(@"query is %@",sqlQuery);
+  //  //NSLog(@"query is %@",sqlQuery);
     
    
     
@@ -99,7 +99,7 @@ static sqlite3 *database = nil;
     
     if(sqlite3_prepare(database, [sqlQuery UTF8String], -1, &statement, 0) != SQLITE_OK)
     {
-        NSLog(@"%s",sqlite3_errmsg(database));
+        //NSLog(@"%s",sqlite3_errmsg(database));
         [sqlQuery release];
     }
     else
@@ -124,7 +124,7 @@ static sqlite3 *database = nil;
             locationObject.state = [locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])];
             locationObject.zipCode = [locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[^0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])];
             
-           // NSLog(@"zip is %@",[locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])]);
+           // //NSLog(@"zip is %@",[locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])]);
             
             locationObject.telephone = [NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)];
             
@@ -146,16 +146,16 @@ static sqlite3 *database = nil;
             
             
             
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 0)]);
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 1)]);
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 2)]);
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 3)]);
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)]);
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 5)]);
-//            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 6)]);
-//            NSLog(@"%f",sqlite3_column_double(statement, 7));
-//            NSLog(@"%f",sqlite3_column_double(statement, 8));
-//            NSLog(@"%f",sqlite3_column_double(statement, 9));
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 0)]);
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 1)]);
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 2)]);
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 3)]);
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)]);
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 5)]);
+//            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 6)]);
+//            //NSLog(@"%f",sqlite3_column_double(statement, 7));
+//            //NSLog(@"%f",sqlite3_column_double(statement, 8));
+//            //NSLog(@"%f",sqlite3_column_double(statement, 9));
             
             [resultLocations addObject:locationObject];
             
@@ -178,15 +178,15 @@ static sqlite3 *database = nil;
 {
     NSString* sqlQuery = [NSString stringWithFormat:@"%@%f%@%f%@",@"select * from harscolocations where latitude = '",location.Latitude,@"' and longitude='",location.Longitude,@"';"];
     
-    NSLog(@"query is %@",sqlQuery);
+    //NSLog(@"query is %@",sqlQuery);
     
-    Location* harscoLocation = [[Location alloc] init];
+    Location* harscoLocation = nil;
     
     sqlite3_stmt* statement = NULL;
     
     if(sqlite3_prepare(database, [sqlQuery UTF8String], -1, &statement, 0) != SQLITE_OK)
     {
-        NSLog(@"%s",sqlite3_errmsg(database));
+        //NSLog(@"%s",sqlite3_errmsg(database));
         [sqlQuery release];
     }
     else
@@ -194,6 +194,7 @@ static sqlite3 *database = nil;
         
         while(sqlite3_step(statement) == SQLITE_ROW)
         {
+            harscoLocation = [[Location alloc] init];
             harscoLocation.name = [[[NSString alloc] initWithFormat:@"%s",(char *)sqlite3_column_text(statement, 0) ] autorelease];
             
             harscoLocation.address = [NSString stringWithFormat:@"%s%@%s%@%s",(char *)sqlite3_column_text(statement, 1),@",",(char *)sqlite3_column_text(statement, 2),@",",(char *)sqlite3_column_text(statement, 3)];
@@ -204,7 +205,7 @@ static sqlite3 *database = nil;
             harscoLocation.state = [harscoLocation.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ harscoLocation.stateAndZip length])];
             harscoLocation.zipCode = [harscoLocation.stateAndZip stringByReplacingOccurrencesOfString:@"[^0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ harscoLocation.stateAndZip length])];
             
-            // NSLog(@"zip is %@",[locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])]);
+            // //NSLog(@"zip is %@",[locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])]);
             
             harscoLocation.telephone = [NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)];
             harscoLocation.webSite = [NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 5)];
@@ -224,11 +225,14 @@ static sqlite3 *database = nil;
             harscoLocation.sundayHours = @"Closed";
             
             
-             NSLog(@"email is %@",harscoLocation.telephone);
+             //NSLog(@"email is %@",harscoLocation.telephone);
         }
     }
     
+    if(harscoLocation)
     return [harscoLocation autorelease];
+    
+    return nil;
     
 }
 
@@ -246,7 +250,7 @@ static sqlite3 *database = nil;
     
     if(sqlite3_prepare(database, [sqlQuery UTF8String], -1, &statement, 0) != SQLITE_OK)
     {
-        NSLog(@"%s",sqlite3_errmsg(database));
+        //NSLog(@"%s",sqlite3_errmsg(database));
         [sqlQuery release];
     }
     else
@@ -270,14 +274,14 @@ static sqlite3 *database = nil;
             locationObject.state = [locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])];
             locationObject.zipCode = [locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[^0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])];
             
-            // NSLog(@"zip is %@",[locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])]);
+            // //NSLog(@"zip is %@",[locationObject.stateAndZip stringByReplacingOccurrencesOfString:@"[0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [ locationObject.stateAndZip length])]);
             
             locationObject.telephone = [NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)];
             locationObject.webSite = [NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 5)];
             
             locationObject.email = [NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 6)];
             
-           // NSLog(@"email is %@",locationObject.email);
+           // //NSLog(@"email is %@",locationObject.email);
             locationObject.Latitude = sqlite3_column_double(statement, 7);
             locationObject.Longitude = sqlite3_column_double(statement, 8);
             
@@ -287,16 +291,16 @@ static sqlite3 *database = nil;
             
             
             
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 0)]);
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 1)]);
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 2)]);
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 3)]);
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)]);
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 5)]);
-            //            NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 6)]);
-            //            NSLog(@"%f",sqlite3_column_double(statement, 7));
-            //            NSLog(@"%f",sqlite3_column_double(statement, 8));
-            //            NSLog(@"%f",sqlite3_column_double(statement, 9));
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 0)]);
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 1)]);
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 2)]);
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 3)]);
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 4)]);
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 5)]);
+            //            //NSLog(@"%@",[NSString stringWithFormat:@"%s",(char *)sqlite3_column_text(statement, 6)]);
+            //            //NSLog(@"%f",sqlite3_column_double(statement, 7));
+            //            //NSLog(@"%f",sqlite3_column_double(statement, 8));
+            //            //NSLog(@"%f",sqlite3_column_double(statement, 9));
             
             [resultLocations addObject:locationObject];
             

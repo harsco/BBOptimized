@@ -34,6 +34,7 @@
     [self.bulletPointsView setText:@"• 100% post-consumer bottle glass                                                                • Less than 1% free silica                                                                                                   • Non-reactive, chemically inert                                                                                             • Uniform density                                                                                                            • Produces white metal surface                                                                                               • Increased visibility & production"];
     
      self.thumbNailImage.image = [UIImage imageNamed:BBGLASSTHUMBS];
+     [self.thumbsButton setImage:[UIImage imageNamed:BBGLASSTHUMBS]forState:UIControlStateNormal];
 }
 
 
@@ -120,7 +121,7 @@
 {
     NSString *resourceDocPath = [[NSString alloc] initWithString:[[[[NSBundle mainBundle]  resourcePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"Documents"]];
     
-    NSLog(@"path for resource is %@",resourceDocPath);
+    //NSLog(@"path for resource is %@",resourceDocPath);
     
     NSString *filePath = [resourceDocPath stringByAppendingPathComponent:BBGLASS];
     [resourceDocPath release];

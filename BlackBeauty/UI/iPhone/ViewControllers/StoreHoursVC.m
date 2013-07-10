@@ -53,7 +53,7 @@
 {
     [super viewWillAppear:YES];
     
-    NSLog(@"loading is %@",location.loadingHours);
+    //NSLog(@"loading is %@",location.loadingHours);
     
     if(!IsRunningTallPhone())
     {
@@ -62,7 +62,7 @@
     
     if(!([location.officeHours length] && [location.loadingHours length]))
     {
-        NSLog(@"loading is %@",location.loadingHours);
+        //NSLog(@"loading is %@",location.loadingHours);
         [self.hoursSegment setHidden:YES];
     }
     

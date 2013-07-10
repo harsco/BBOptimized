@@ -62,7 +62,7 @@
     
     if(IsRunningTallPhone())
     {
-        [self.faqListView setFrame:CGRectMake(0, 20, 320, 400)];
+        [self.faqListView setFrame:CGRectMake(0, 20, 320, 425)];
     }
 }
 
@@ -90,7 +90,7 @@
 
 -(void)prepareFAQData
 {
-    for(int i=0;i<6;i++)
+    for(int i=0;i<7;i++)
     {
         FAQ* faqObject = [[FAQ alloc] init];
         
@@ -124,6 +124,11 @@
             faqObject.question = @"Who is Harsco?";
             faqObject.answer = @"faq6";
         }
+        else if(i==6)
+        {
+            faqObject.question = @"What form of payments are accepted?";
+            faqObject.answer = @"faq7";
+        }
         
         [faqArray addObject:faqObject];
         
@@ -147,7 +152,13 @@
     return [faqArray count];
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(IsRunningTallPhone())
+    return 60.0;
+    
+    return 55.0;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
     
@@ -174,7 +185,18 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    UIImageView* accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(309, 22, 11, 15)];
+    
+    UIImageView* accessoryView = nil;
+    
+    if(IsRunningTallPhone())
+    {
+        accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(309, 22, 11, 15)];
+    }
+    else
+    {
+        accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(309, 19, 11, 15)];
+    }
+    
     accessoryView.image = [UIImage imageNamed:@"arrow"];
     [cell addSubview:[accessoryView autorelease]];
     

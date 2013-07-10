@@ -20,7 +20,7 @@
         receivedData = [[NSMutableData alloc] init];
         
       
-        //NSLog(@"URL is %@",connectionURL);
+        ////NSLog(@"URL is %@",connectionURL);
     }
     return self;
 }
@@ -89,7 +89,7 @@
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    //NSLog(@"data bytes is %s",[data bytes]);
+    ////NSLog(@"data bytes is %s",[data bytes]);
     [receivedData appendData:data];
 }
 
@@ -111,7 +111,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     //[connection release];
     //[self movieReceived];
-    NSLog(@"data is %s",[receivedData bytes]);
+    //NSLog(@"data is %s",[receivedData bytes]);
     
     [self finish];
     

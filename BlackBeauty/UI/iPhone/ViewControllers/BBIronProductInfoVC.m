@@ -31,6 +31,7 @@
     [self.productInfoWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"grading_iron" ofType:@"html"]isDirectory:NO]]];
     [self.packagingView setText:@"Available in 50lb bags at 60 bags per pallet, Jumbo bags loaded up to 2 tons (4,000lbs) and bulk.  Shrink wrap available. Pre-blended with dust suppressant available upon request"];
      self.thumbNailImage.image = [UIImage imageNamed:BBIRONTHUMBS];
+    [self.thumbsButton setImage:[UIImage imageNamed:BBIRONTHUMBS]forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +104,7 @@
 {
     NSString *resourceDocPath = [[NSString alloc] initWithString:[[[[NSBundle mainBundle]  resourcePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"Documents"]];
     
-    NSLog(@"path for resource is %@",resourceDocPath);
+    //NSLog(@"path for resource is %@",resourceDocPath);
     
     NSString *filePath = [resourceDocPath stringByAppendingPathComponent:BBIRON];
     [resourceDocPath release];

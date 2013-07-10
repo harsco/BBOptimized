@@ -27,7 +27,7 @@
 -(BOOL)isFileExists:(NSString*)filename
 {
     
-    NSLog(@"file name is %@",filename);
+    //NSLog(@"file name is %@",filename);
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *resourceDocPath = [[NSString alloc] initWithString:[[[[NSBundle mainBundle]  resourcePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"Documents"]];
     

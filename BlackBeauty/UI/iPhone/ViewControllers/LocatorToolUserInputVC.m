@@ -53,7 +53,7 @@
     
     if(IS_RETINA)
     {
-        NSLog(@"yes");
+        //NSLog(@"yes");
     }
     
 }

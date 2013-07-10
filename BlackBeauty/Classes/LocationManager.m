@@ -66,7 +66,7 @@
         
     }
     
-    NSLog(@"LocationManager::getResellersNearMYLocation: Call for Users Location");
+    //NSLog(@"LocationManager::getResellersNearMYLocation: Call for Users Location");
 
 }
 
@@ -101,7 +101,7 @@
 {
     [locationTimer invalidate];
     locationTimer = nil;
-    //NSLog(@"taking action");
+    ////NSLog(@"taking action");
     if(!isLocationFixed)
     {
         [locationManager stopUpdatingLocation];
@@ -143,7 +143,7 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     
-    NSLog(@"count is %d",[locations count]);
+    //NSLog(@"count is %d",[locations count]);
     isLocationFixed = YES;
     CLLocation* newLocation = [locations objectAtIndex:[locations count]-1];
     
@@ -164,8 +164,8 @@
     NSString *latitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
     NSString *longitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
     
-    NSLog(@"dLatitude : %@", latitude);
-    NSLog(@"dLongitude : %@",longitude);
+    //NSLog(@"dLatitude : %@", latitude);
+    //NSLog(@"dLongitude : %@",longitude);
     
     [locationManager stopUpdatingLocation];
     
@@ -202,8 +202,8 @@
 //    NSString *latitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
 //    NSString *longitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
 //    
-//    NSLog(@"dLatitude : %@", latitude);
-//    NSLog(@"dLongitude : %@",longitude);
+//    //NSLog(@"dLatitude : %@", latitude);
+//    //NSLog(@"dLongitude : %@",longitude);
 //    
 //    [locationManager stopUpdatingLocation];
 //    
@@ -247,7 +247,7 @@
 
     
     [reverseGeoCoder reverseGeocodeLocation:locObj completionHandler:^(NSArray *placemarks, NSError *error) {
-         NSLog(@"Received placemarks: %@", placemarks);
+         //NSLog(@"Received placemarks: %@", placemarks);
         CLPlacemark* placemark = [placemarks objectAtIndex:0];
         if (placemark) {
             //Using blocks, get zip code
@@ -255,7 +255,7 @@
             
             location.name = placemark.locality;
             
-            NSLog(@"placemarks is %@",placemark.locality);
+            //NSLog(@"placemarks is %@",placemark.locality);
             
             if([placemark.ISOcountryCode isEqualToString:@"US"])
             {
@@ -283,7 +283,7 @@
     CLGeocoder* geoCoder = [[CLGeocoder alloc] init];
     locationDesired = [[Location alloc] init];
     
-    NSLog(@"place is %@",place);
+    //NSLog(@"place is %@",place);
     
   /*  NSDictionary *locationDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                         place, kABPersonAddressStateKey,
@@ -294,12 +294,12 @@
 
     [geoCoder geocodeAddressDictionary:locationDictionary completionHandler:^(NSArray* placemarks, NSError* error){
         
-        NSLog(@"Received placemarks: %@", placemarks);
-        NSLog(@"error is %@",[error localizedDescription]);
+        //NSLog(@"Received placemarks: %@", placemarks);
+        //NSLog(@"error is %@",[error localizedDescription]);
         
         if(error)
         {
-            NSLog(@"error is %@%d",[error localizedDescription],[error code]);
+            //NSLog(@"error is %@%d",[error localizedDescription],[error code]);
             
             NSString* errorString = @"";
             
@@ -320,11 +320,11 @@
             {
                 // Process the placemark.
                 
-                // NSLog(@"count is %d",[placemarks count]);
+                // //NSLog(@"count is %d",[placemarks count]);
                 CLPlacemark *placemark = [placemarks objectAtIndex:0];
                 CLLocation *location = placemark.location;
                 CLLocationCoordinate2D coordinate = location.coordinate;
-                NSLog(@"%f%f", coordinate.latitude,coordinate.longitude);
+                //NSLog(@"%f%f", coordinate.latitude,coordinate.longitude);
                 
                 
                 
@@ -342,7 +342,7 @@
     
     
     
-    //NSLog(@"place is %@",[place stringByAppendingFormat:@"%@",@",United States"]);
+    ////NSLog(@"place is %@",[place stringByAppendingFormat:@"%@",@",United States"]);
     
     
    // [place stringByAppendingFormat:@"%@",@",United States"]
@@ -352,11 +352,11 @@
                  completionHandler:^(NSArray* placemarks, NSError* error){
                      
                      
-                     NSLog(@"Received placemarks: %@", placemarks);
+                     //NSLog(@"Received placemarks: %@", placemarks);
                      
                      if(error)
                      {
-                          NSLog(@"error is %@%d",[error localizedDescription],[error code]);
+                          //NSLog(@"error is %@%d",[error localizedDescription],[error code]);
                          
                          NSString* errorString = @"";
                          
@@ -378,13 +378,13 @@
                          {
                              // Process the placemark.
                              
-                            // NSLog(@"count is %d",[placemarks count]);
+                            // //NSLog(@"count is %d",[placemarks count]);
                              
                              CLPlacemark *placemark = [placemarks objectAtIndex:0];
                              CLLocation *location = placemark.location;
                              CLLocationCoordinate2D coordinate = location.coordinate;
-                             NSLog(@"%f%f", coordinate.latitude,coordinate.longitude);
-                             NSLog(@"country code is %@",placemark.ISOcountryCode);
+                             //NSLog(@"%f%f", coordinate.latitude,coordinate.longitude);
+                             //NSLog(@"country code is %@",placemark.ISOcountryCode);
                              
                              
                                  if((coordinate.latitude < 18.000 || coordinate.latitude > 48.987386) || (coordinate.longitude < -124.626080 || coordinate.longitude > -62.361014) )
@@ -402,14 +402,14 @@
                                      locationDesired.Latitude = coordinate.latitude;
                                      locationDesired.Longitude = coordinate.longitude;
                                      locationDesired.name = placemark.locality;
-                                     //                                 NSLog(@"name is %@", locationDesired.name);
-                                     //                                 NSLog(@"placemark.ISOcountryCode %@",placemark.ISOcountryCode);
-                                     //                                 NSLog(@"placemark.country %@",placemark.country);
-                                     //                                 NSLog(@"placemark.locality %@",placemark.locality);
-                                     //                                 NSLog(@"placemark.administrativeArea %@",placemark.administrativeArea);
-                                     //                                 NSLog(@"placemark.subadmin %@",placemark.subAdministrativeArea);
-                                     //                                 NSLog(@"placemark.subLocality %@",placemark.subLocality);
-                                     //                                 NSLog(@"placemark.subThoroughfare %@",placemark.subThoroughfare);
+                                     //                                 //NSLog(@"name is %@", locationDesired.name);
+                                     //                                 //NSLog(@"placemark.ISOcountryCode %@",placemark.ISOcountryCode);
+                                     //                                 //NSLog(@"placemark.country %@",placemark.country);
+                                     //                                 //NSLog(@"placemark.locality %@",placemark.locality);
+                                     //                                 //NSLog(@"placemark.administrativeArea %@",placemark.administrativeArea);
+                                     //                                 //NSLog(@"placemark.subadmin %@",placemark.subAdministrativeArea);
+                                     //                                 //NSLog(@"placemark.subLocality %@",placemark.subLocality);
+                                     //                                 //NSLog(@"placemark.subThoroughfare %@",placemark.subThoroughfare);
                                      
                                      [self updateLocationsSetToUI];
                                      

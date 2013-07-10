@@ -11,6 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeScreenVC.h"
+#import "EULAVCViewController.h"
 
 @class ViewController;
 
@@ -20,5 +21,6 @@
 
 
 @property (strong, nonatomic) HomeScreenVC *viewController;
+
 
 @end

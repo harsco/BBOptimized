@@ -34,6 +34,7 @@
 -(IBAction)onFindBBToolClicked:(id)sender;
 -(IBAction)onContactUsClicked:(id)sender;
 -(IBAction)onPrivacyButtonClicked:(id)sender;
+-(IBAction)onTOSClicked:(id)sender;
 -(IBAction)onMSDSClicked:(id)sender;
 -(IBAction)onProfileGuideClicked:(id)sender;
 -(IBAction)onAboutUsClicked:(id)sender;

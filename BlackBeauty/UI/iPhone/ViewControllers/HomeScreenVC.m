@@ -103,7 +103,7 @@
     aboutUSVC* aboutUsScreen = [[aboutUSVC alloc] init];
     //rootNavigationController = [[UINavigationController alloc] initWithRootViewController:aboutUsScreen];
     aboutUsScreen.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:rootNavigationController animated:YES completion:nil];
+    [self presentViewController:aboutUsScreen animated:YES completion:nil];
     
     [aboutUsScreen release];
   
@@ -157,11 +157,37 @@
     
 }
 
+-(IBAction)onTOSClicked:(id)sender
+{
+    DocumentViewerVC* tosViewer = [[DocumentViewerVC alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:@"bbeula" ofType:@"rtf"]];
 
+    tosViewer.isTOS = YES;
+    
+    rootNavigationController = [[UINavigationController alloc] initWithRootViewController:tosViewer];
+    rootNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:rootNavigationController animated:YES completion:nil];
+    
+    
+    [tosViewer release];
+    
+
+    
+}
 
 -(IBAction)onPrivacyButtonClicked:(id)sender
 {
-    NSLog(@"Privacy Clicked");
+    DocumentViewerVC* privacyPolicy = [[DocumentViewerVC alloc] initWithFilePath:PRIVACYURL];
+    
+    privacyPolicy.isPrivacyPolicy = YES;
+    
+    rootNavigationController = [[UINavigationController alloc] initWithRootViewController:privacyPolicy];
+    rootNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:rootNavigationController animated:YES completion:nil];
+    
+    
+    [privacyPolicy release];
 }
 
 @end

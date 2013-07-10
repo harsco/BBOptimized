@@ -105,7 +105,7 @@
     {
         static NSString *BridgeAnnotationIdentifier = @"userAnnotationIdentifier";
         
-        //NSLog(@"annotation");
+        ////NSLog(@"annotation");
         
         MKPinAnnotationView *pinView =
         (MKPinAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:BridgeAnnotationIdentifier];

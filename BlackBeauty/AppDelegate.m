@@ -25,13 +25,18 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        //self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil] autorelease];
+        
         self.viewController  = [[[HomeScreenVC alloc] initWithNibName:@"HomeScreenVC" bundle:nil] autorelease];
         
     } else {
         //self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil] autorelease];
     }
-    self.window.rootViewController = self.viewController;                  //present the root Tab as a landing page (currently for iPhone
+    
+    if([[NSUserDefaults standardUserDefaults] valueForKey:EULAKEY])
+       self.window.rootViewController = self.viewController;
+    else
+        self.window.rootViewController = [[[EULAVCViewController alloc] initWithNibName:@"EULAVCViewController" bundle:nil] autorelease];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

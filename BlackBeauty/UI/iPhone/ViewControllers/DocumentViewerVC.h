@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
+#import "Utilities.h"
 
 
 @interface DocumentViewerVC : UIViewController<UIWebViewDelegate,MFMailComposeViewControllerDelegate,UIDocumentInteractionControllerDelegate,UIActionSheetDelegate>
@@ -17,12 +18,15 @@
     NSString* filePathToBeRendered;
     
     BOOL isProfileGuide;
+    BOOL isTOS;
+    BOOL isPrivacyPolicy;
 }
 
 @property(nonatomic,retain) IBOutlet UIWebView* documentViewer;
 @property(nonatomic,retain)UIActivityIndicatorView* loadingIndicator;
 @property(nonatomic)BOOL isProfileGuide;
-
+@property(nonatomic)BOOL isTOS;
+@property(nonatomic)BOOL isPrivacyPolicy;
 -(id)initWithFilePath:(NSString*)filePath;
 
 @end

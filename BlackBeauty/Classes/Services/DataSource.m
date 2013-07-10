@@ -92,7 +92,7 @@
 
 -(void)didFailDownloadData:(NSError *)error
 {
-    NSLog(@"error downloading");
+    //NSLog(@"error downloading");
     //[delegate dataSourceOrderListDidFail:error];
     if(self.delegate && [self.delegate respondsToSelector:@selector(dataSourceDidFailToDownload:)])
     {

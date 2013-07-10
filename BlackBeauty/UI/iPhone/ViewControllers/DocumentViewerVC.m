@@ -13,7 +13,7 @@
 @end
 
 @implementation DocumentViewerVC
-@synthesize documentViewer,loadingIndicator,isProfileGuide;
+@synthesize documentViewer,loadingIndicator,isProfileGuide,isTOS,isPrivacyPolicy;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,6 +21,8 @@
     if (self) {
         // Custom initialization
         isProfileGuide = NO;
+        isTOS = NO;
+        isPrivacyPolicy = NO;
     }
     return self;
 }
@@ -31,7 +33,7 @@
     if(self = [super init])
     {
         filePathToBeRendered = [[NSString alloc] initWithString:filePath];
-        //NSLog(@"path is %@",filePathToBeRendered);
+        ////NSLog(@"path is %@",filePathToBeRendered);
         
     }
     return self;
@@ -64,6 +66,50 @@
         self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
         
     }
+    else if(isTOS)
+    {
+        self.title = @"EULA";
+        UIImage* image = [UIImage imageNamed:@"back-button"];
+        CGRect frameimg;
+        
+        if(IS_RETINA)
+            frameimg = CGRectMake(0, 0, 30, 30);
+        else
+            frameimg = CGRectMake(0, 0, 25, 25);
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(onBackClick:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [button setShowsTouchWhenHighlighted:YES];
+        
+        UIBarButtonItem *backButton =[[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
+        self.navigationController.navigationBar.topItem.leftBarButtonItem = backButton;
+        self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
+    }
+    
+    else if(isPrivacyPolicy)
+    {
+        self.title = @"Privacy Policy";
+        UIImage* image = [UIImage imageNamed:@"back-button"];
+        CGRect frameimg;
+        
+        if(IS_RETINA)
+            frameimg = CGRectMake(0, 0, 30, 30);
+        else
+            frameimg = CGRectMake(0, 0, 25, 25);
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(onBackClick:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [button setShowsTouchWhenHighlighted:YES];
+        
+        UIBarButtonItem *backButton =[[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
+        self.navigationController.navigationBar.topItem.leftBarButtonItem = backButton;
+        self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
+
+    }
     
     [self openFile];
 }
@@ -83,10 +129,17 @@
 {
     if(!isProfileGuide)
     {
-        UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(onActionClicked:)];
-        self.navigationController.navigationBar.topItem.rightBarButtonItem = shareButton;
+        if(!isTOS)
+        {
+            if(!isPrivacyPolicy)
+            {
+                UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(onActionClicked:)];
+                self.navigationController.navigationBar.topItem.rightBarButtonItem = shareButton;
+                
+                [shareButton release];
+            }
+        }
         
-        [shareButton release];
     }
     
 }
@@ -104,8 +157,11 @@
 {
     [self.loadingIndicator setHidden:NO];
     [self.loadingIndicator startAnimating];
-    [self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePathToBeRendered]]];
     
+    if(isPrivacyPolicy)
+    [self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:filePathToBeRendered]]];
+    else
+    [self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePathToBeRendered]]];
 }
 
 #pragma mark Action Methods
@@ -134,7 +190,7 @@
         //Email Clicked
         
         MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
-         //NSLog(@"path is %@",filePathToBeRendered);
+         ////NSLog(@"path is %@",filePathToBeRendered);
          [mailController setSubject:[[[filePathToBeRendered lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@" MSDS"]];
          
          //NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"png"];
@@ -183,6 +239,8 @@
 {
     [self.loadingIndicator stopAnimating];
     [self.loadingIndicator setHidden:YES];
+    
+    [Utilities showAlertOKWithTitle:@"Error Loading Document" withMessage:[error localizedDescription]];
     
 }
 

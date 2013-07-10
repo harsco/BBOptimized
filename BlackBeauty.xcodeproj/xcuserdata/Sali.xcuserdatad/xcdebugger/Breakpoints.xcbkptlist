@@ -46,13 +46,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "BlackBeauty/UI/iPhone/ViewControllers/locationSearchResultsVC.m"
-         timestampString = "394638355.21081"
+         filePath = "BlackBeauty/UI/iPhone/ViewControllers/LocationDetailsVC.m"
+         timestampString = "395060974.850947"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "600"
-         endingLineNumber = "600"
-         landmarkName = "-didFailToGetDesiredLocations:"
+         startingLineNumber = "320"
+         endingLineNumber = "320"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

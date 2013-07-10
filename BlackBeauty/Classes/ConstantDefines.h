@@ -52,6 +52,12 @@
 #define BBGLASSSPECS @"BBGLASSSPECS"
 #define BBIRONSPECS @"BBIRONSPECS"
 
+#define BBEULA @"bbeula"
+
+#define EULAKEY @"EULADONE"
+
+#define PRIVACYURL @"http://www.blackbeautyabrasives.com/privacy-policy.php"
+
 #define SYSTEMVERSION5 @"5.1"
 #define ISIOS5 [UIDevice currentDevice] systemVersion]
 #define SYSTEM_VERSION_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)

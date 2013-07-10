@@ -21,6 +21,7 @@
     UITextView* bulletPointsView;
     
     UIImageView* thumbNailImage;
+    UIButton* thumbsButton;
     UIButton* gradesButton;
     UIButton* packagingButton;
     
@@ -42,6 +43,7 @@
 
 
 @property(nonatomic,retain)IBOutlet UIImageView* thumbNailImage;
+@property(nonatomic,retain)IBOutlet UIButton* thumbsButton;
 @property(nonatomic,retain)IBOutlet UIButton* gradesButton;
 @property(nonatomic,retain)IBOutlet UIButton* packagingButton;
 @property(nonatomic,retain)IBOutlet UITableView* userOptionsTable;

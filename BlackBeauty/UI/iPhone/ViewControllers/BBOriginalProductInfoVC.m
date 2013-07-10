@@ -29,6 +29,7 @@
 	// Do any additional setup after loading the view.
     self.title = @"BLACK BEAUTY®";
     self.thumbNailImage.image = [UIImage imageNamed:BBORIGINALTHUMBS];
+    [self.thumbsButton setImage:[UIImage imageNamed:BBORIGINALTHUMBS]forState:UIControlStateNormal];
     [self initVars];
     
 }
@@ -116,7 +117,7 @@
 {
     NSString *resourceDocPath = [[NSString alloc] initWithString:[[[[NSBundle mainBundle]  resourcePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"Documents"]];
     
-    NSLog(@"path for resource is %@",resourceDocPath);
+    //NSLog(@"path for resource is %@",resourceDocPath);
     
     NSString *filePath = [resourceDocPath stringByAppendingPathComponent:BBORIGINAL];
     [resourceDocPath release];
