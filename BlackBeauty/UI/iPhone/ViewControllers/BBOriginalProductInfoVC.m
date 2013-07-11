@@ -28,9 +28,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = @"BLACK BEAUTY®";
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"BLACK BEAUTY®"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+	[label release];
+    
     self.thumbNailImage.image = [UIImage imageNamed:BBORIGINALTHUMBS];
     [self.thumbsButton setImage:[UIImage imageNamed:BBORIGINALTHUMBS]forState:UIControlStateNormal];
     [self initVars];
+    
+    
+    
     
 }
 
@@ -39,6 +52,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 
@@ -104,6 +118,7 @@
     else if(indexPath.section == 1)
     {
         DocumentViewerVC* pdfViewer = [[DocumentViewerVC alloc] initWithFilePath:[[NSBundle mainBundle] pathForResource:BBORIGINALSPECS ofType:@"pdf"]];
+        pdfViewer.isSpecifications = YES;
         [self.navigationController pushViewController:pdfViewer animated:YES];
         
         [pdfViewer release];

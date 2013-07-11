@@ -49,8 +49,6 @@
     
     [self prepareNavigationBar];
     
-   
-    
     if(userInput == MyLocation)
     {
         
@@ -413,7 +411,7 @@
             MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
                                                   initWithAnnotation:annotation reuseIdentifier:UserAnnotationIdentifier];
             
-            customPinView.pinColor = MKPinAnnotationColorRed;
+            customPinView.pinColor = MKPinAnnotationColorPurple;
             customPinView.animatesDrop = NO;
             customPinView.canShowCallout = YES;
             

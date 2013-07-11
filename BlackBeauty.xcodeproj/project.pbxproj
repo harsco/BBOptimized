@@ -32,7 +32,6 @@
 		3A41191017573118006C1B8B /* msds_download.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41190417573118006C1B8B /* msds_download.png */; };
 		3A41191217573118006C1B8B /* viewonmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41190617573118006C1B8B /* viewonmap.png */; };
 		3A41191317573118006C1B8B /* viewonmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41190717573118006C1B8B /* viewonmap@2x.png */; };
-		3A41191517575B7B006C1B8B /* harsco_banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A41191417575B7B006C1B8B /* harsco_banner.jpg */; };
 		3A41191917576BC6006C1B8B /* faqDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41191717576BC5006C1B8B /* faqDetailsVC.m */; };
 		3A41191C17576C04006C1B8B /* faqDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A41191B17576C03006C1B8B /* faqDetailsVC.xib */; };
 		3A41191F17577115006C1B8B /* FAQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41191E17577115006C1B8B /* FAQ.m */; };
@@ -42,18 +41,16 @@
 		3A4EF33C1765B534009E165A /* glass_thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4EF3391765B533009E165A /* glass_thumbs.png */; };
 		3A4EF33D1765B534009E165A /* iron-thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4EF33A1765B534009E165A /* iron-thumbs.png */; };
 		3A4EF33E1765B534009E165A /* original_thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4EF33B1765B534009E165A /* original_thumbs.png */; };
-		3A4EF3401765B9A3009E165A /* about_harsco.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4EF33F1765B9A3009E165A /* about_harsco.png */; };
 		3A4EF34417660D94009E165A /* StoreHoursVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4EF34217660D92009E165A /* StoreHoursVC.m */; };
 		3A4EF34717660DCF009E165A /* StoreHoursVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4EF34617660DCF009E165A /* StoreHoursVC.xib */; };
 		3A5208F617578857005113A6 /* faq4.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A5208F317578856005113A6 /* faq4.html */; };
 		3A5208F717578857005113A6 /* faq5.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A5208F417578857005113A6 /* faq5.html */; };
 		3A5208F817578857005113A6 /* faq6.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A5208F517578857005113A6 /* faq6.html */; };
-		3A58FF07178BEA55004CB1A3 /* zoomblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF05178BEA55004CB1A3 /* zoomblue.png */; };
-		3A58FF08178BEA55004CB1A3 /* zoomblue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF06178BEA55004CB1A3 /* zoomblue@2x.png */; };
+		3A52C985178EE11A0090F345 /* bbeula.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3A52C984178EE11A0090F345 /* bbeula.rtf */; };
+		3A52C987178EFE220090F345 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = 3A52C986178EFE220090F345 /* location.db */; };
 		3A58FF0B178BEFEA004CB1A3 /* orangebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF09178BEFEA004CB1A3 /* orangebutton.png */; };
 		3A58FF0C178BEFEA004CB1A3 /* orangebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF0A178BEFEA004CB1A3 /* orangebutton@2x.png */; };
 		3A58FF12178BFA3C004CB1A3 /* faq7.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF11178BFA3C004CB1A3 /* faq7.html */; };
-		3A58FF14178C2208004CB1A3 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF13178C2208004CB1A3 /* location.db */; };
 		3A58FF18178C411B004CB1A3 /* EULAVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A58FF16178C411B004CB1A3 /* EULAVCViewController.m */; };
 		3A58FF1B178C511D004CB1A3 /* EULAVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A58FF1A178C511D004CB1A3 /* EULAVCViewController.xib */; };
 		3A5A5703174E2EEE00E9DB52 /* UserLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5A5702174E2EEE00E9DB52 /* UserLocationAnnotation.m */; };
@@ -64,9 +61,6 @@
 		3A5E88B317156DD800C531CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E88B117156DD800C531CA /* InfoPlist.strings */; };
 		3A5E88B517156DD800C531CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E88B417156DD800C531CA /* main.m */; };
 		3A5E88B917156DD800C531CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E88B817156DD800C531CA /* AppDelegate.m */; };
-		3A5E88C217156DD800C531CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E88C117156DD800C531CA /* ViewController.m */; };
-		3A5E88C517156DD800C531CA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E88C317156DD800C531CA /* ViewController_iPhone.xib */; };
-		3A5E88C817156DD800C531CA /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E88C617156DD800C531CA /* ViewController_iPad.xib */; };
 		3A5EC6BD175DD96400F7C140 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A5EC6BC175DD96400F7C140 /* background.png */; };
 		3A6455FF1754C8F200E90FCF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6455FE1754C8F200E90FCF /* MessageUI.framework */; };
 		3A6456031754EB8700E90FCF /* contactUSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6456011754EB8600E90FCF /* contactUSVC.m */; };
@@ -103,8 +97,6 @@
 		3A987DE41761CBAD006D5750 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A987DE31761CBAD006D5750 /* SystemConfiguration.framework */; };
 		3A987DE61761CBB5006D5750 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A987DE51761CBB4006D5750 /* CFNetwork.framework */; };
 		3AA5DFEB1732A0B90002E657 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5DFEA1732A0B90002E657 /* Location.m */; };
-		3AA717DD178D452B00B2EA1A /* bbeula.html in Resources */ = {isa = PBXBuildFile; fileRef = 3AA717DC178D452B00B2EA1A /* bbeula.html */; };
-		3AA717E1178D671400B2EA1A /* bbeula.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3AA717E0178D671400B2EA1A /* bbeula.rtf */; };
 		3AA717E4178D6E3300B2EA1A /* accept.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA717E2178D6E3300B2EA1A /* accept.png */; };
 		3AA717E5178D6E3300B2EA1A /* accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA717E3178D6E3300B2EA1A /* accept@2x.png */; };
 		3AB002F01769D7FC001DACEA /* aboutBB.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB002EF1769D7FC001DACEA /* aboutBB.png */; };
@@ -117,8 +109,6 @@
 		3AB0358D17855BEF0077C0B4 /* app_icon_iphone_high-res.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0358C17855BEF0077C0B4 /* app_icon_iphone_high-res.png */; };
 		3AB0359317855E610077C0B4 /* about-harsco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359217855E610077C0B4 /* about-harsco@2x.png */; };
 		3AB0359517855E9C0077C0B4 /* about-harsco-2-high-res.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359417855E9C0077C0B4 /* about-harsco-2-high-res.png */; };
-		3AB0359817855F970077C0B4 /* zoom.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359617855F970077C0B4 /* zoom.png */; };
-		3AB0359917855F970077C0B4 /* zoom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0359717855F970077C0B4 /* zoom@2x.png */; };
 		3AB7BEC71733961A00029A68 /* background_image_iphone_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BEBB1733961A00029A68 /* background_image_iphone_lowres.png */; };
 		3AB7BECB1733961A00029A68 /* launch image_iphone_metal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BEBF1733961A00029A68 /* launch image_iphone_metal.png */; };
 		3AB7BEE01733962900029A68 /* background_image_iphone_lowres@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7BED31733962900029A68 /* background_image_iphone_lowres@2x.png */; };
@@ -141,7 +131,6 @@
 		3AB89FD8175CABE700971558 /* DataDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB89FD7175CABE700971558 /* DataDownloadOperation.m */; };
 		3AB89FDC175CB26700971558 /* DocumentViewerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB89FDA175CB26100971558 /* DocumentViewerVC.m */; };
 		3AB89FDF175CB2A100971558 /* DocumentViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FDE175CB2A000971558 /* DocumentViewerVC.xib */; };
-		3AB89FE1175CDAE700971558 /* ProfileGuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FE0175CDAE600971558 /* ProfileGuideCell.xib */; };
 		3AB89FE3175CDD5700971558 /* ProfileGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB89FE2175CDD5700971558 /* ProfileGuide.pdf */; };
 		3ABDA55317748381003654BC /* StoreHoursCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDA55217748380003654BC /* StoreHoursCell.xib */; };
 		3ABDA55617748409003654BC /* StoreHoursCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABDA55517748409003654BC /* StoreHoursCell.m */; };
@@ -155,13 +144,10 @@
 		3ABDED6D1744E51C002197B4 /* about us_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED641744E51C002197B4 /* about us_low@2x.png */; };
 		3ABDED6F1744E51C002197B4 /* contact us_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED661744E51C002197B4 /* contact us_low@2x.png */; };
 		3ABDED701744E51C002197B4 /* faq_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED671744E51C002197B4 /* faq_low@2x.png */; };
-		3ABDED711744E51C002197B4 /* grid_high.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED681744E51C002197B4 /* grid_high.png */; };
 		3ABDED721744E51C002197B4 /* msds_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED691744E51C002197B4 /* msds_low@2x.png */; };
 		3ABDED731744E51C002197B4 /* products_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED6A1744E51C002197B4 /* products_low@2x.png */; };
 		3ABDED741744E51C002197B4 /* profile guide_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED6B1744E51C002197B4 /* profile guide_low@2x.png */; };
 		3ABDED751744E51C002197B4 /* where to buy_low@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED6C1744E51C002197B4 /* where to buy_low@2x.png */; };
-		3ABDED771744E7DA002197B4 /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED761744E7D9002197B4 /* grid@2x.png */; };
-		3ABDED791744E906002197B4 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED781744E905002197B4 /* grid.png */; };
 		3ABDED7F17451D30002197B4 /* ProductsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABDED7D17451D2F002197B4 /* ProductsListVC.m */; };
 		3ABDED8217451D64002197B4 /* ProductsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABDED8117451D64002197B4 /* ProductsListVC.xib */; };
 		3AC2D6BF1738E7B400B2A714 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC2D6BE1738E7B400B2A714 /* AddressBook.framework */; };
@@ -208,7 +194,6 @@
 		3A41190417573118006C1B8B /* msds_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = msds_download.png; path = UI/iPhone/Resources/images/msds_download.png; sourceTree = "<group>"; };
 		3A41190617573118006C1B8B /* viewonmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewonmap.png; path = UI/iPhone/Resources/images/viewonmap.png; sourceTree = "<group>"; };
 		3A41190717573118006C1B8B /* viewonmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "viewonmap@2x.png"; path = "UI/iPhone/Resources/images/viewonmap@2x.png"; sourceTree = "<group>"; };
-		3A41191417575B7B006C1B8B /* harsco_banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = harsco_banner.jpg; path = UI/iPhone/Resources/images/harsco_banner.jpg; sourceTree = "<group>"; };
 		3A41191617576BC5006C1B8B /* faqDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = faqDetailsVC.h; path = UI/iPhone/ViewControllers/faqDetailsVC.h; sourceTree = "<group>"; };
 		3A41191717576BC5006C1B8B /* faqDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = faqDetailsVC.m; path = UI/iPhone/ViewControllers/faqDetailsVC.m; sourceTree = "<group>"; };
 		3A41191B17576C03006C1B8B /* faqDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = faqDetailsVC.xib; path = UI/iPhone/Resources/Nib/faqDetailsVC.xib; sourceTree = "<group>"; };
@@ -220,19 +205,17 @@
 		3A4EF3391765B533009E165A /* glass_thumbs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glass_thumbs.png; path = UI/iPhone/Resources/images/glass_thumbs.png; sourceTree = "<group>"; };
 		3A4EF33A1765B534009E165A /* iron-thumbs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iron-thumbs.png"; path = "UI/iPhone/Resources/images/iron-thumbs.png"; sourceTree = "<group>"; };
 		3A4EF33B1765B534009E165A /* original_thumbs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = original_thumbs.png; path = UI/iPhone/Resources/images/original_thumbs.png; sourceTree = "<group>"; };
-		3A4EF33F1765B9A3009E165A /* about_harsco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_harsco.png; path = UI/iPhone/Resources/images/about_harsco.png; sourceTree = "<group>"; };
 		3A4EF34117660D92009E165A /* StoreHoursVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreHoursVC.h; path = UI/iPhone/ViewControllers/StoreHoursVC.h; sourceTree = "<group>"; };
 		3A4EF34217660D92009E165A /* StoreHoursVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreHoursVC.m; path = UI/iPhone/ViewControllers/StoreHoursVC.m; sourceTree = "<group>"; };
 		3A4EF34617660DCF009E165A /* StoreHoursVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StoreHoursVC.xib; path = UI/iPhone/Resources/Nib/StoreHoursVC.xib; sourceTree = "<group>"; };
 		3A5208F317578856005113A6 /* faq4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq4.html; sourceTree = "<group>"; };
 		3A5208F417578857005113A6 /* faq5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq5.html; sourceTree = "<group>"; };
 		3A5208F517578857005113A6 /* faq6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq6.html; sourceTree = "<group>"; };
-		3A58FF05178BEA55004CB1A3 /* zoomblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomblue.png; path = UI/iPhone/Resources/images/zoomblue.png; sourceTree = "<group>"; };
-		3A58FF06178BEA55004CB1A3 /* zoomblue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zoomblue@2x.png"; path = "UI/iPhone/Resources/images/zoomblue@2x.png"; sourceTree = "<group>"; };
+		3A52C984178EE11A0090F345 /* bbeula.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = bbeula.rtf; sourceTree = "<group>"; };
+		3A52C986178EFE220090F345 /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
 		3A58FF09178BEFEA004CB1A3 /* orangebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orangebutton.png; path = UI/iPhone/Resources/images/orangebutton.png; sourceTree = "<group>"; };
 		3A58FF0A178BEFEA004CB1A3 /* orangebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orangebutton@2x.png"; path = "UI/iPhone/Resources/images/orangebutton@2x.png"; sourceTree = "<group>"; };
 		3A58FF11178BFA3C004CB1A3 /* faq7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq7.html; sourceTree = "<group>"; };
-		3A58FF13178C2208004CB1A3 /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
 		3A58FF15178C411B004CB1A3 /* EULAVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EULAVCViewController.h; path = UI/iPhone/ViewControllers/EULAVCViewController.h; sourceTree = "<group>"; };
 		3A58FF16178C411B004CB1A3 /* EULAVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EULAVCViewController.m; path = UI/iPhone/ViewControllers/EULAVCViewController.m; sourceTree = "<group>"; };
 		3A58FF1A178C511D004CB1A3 /* EULAVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EULAVCViewController.xib; path = UI/iPhone/Resources/Nib/EULAVCViewController.xib; sourceTree = "<group>"; };
@@ -249,10 +232,6 @@
 		3A5E88B617156DD800C531CA /* BlackBeauty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlackBeauty-Prefix.pch"; sourceTree = "<group>"; };
 		3A5E88B717156DD800C531CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A5E88B817156DD800C531CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3A5E88C017156DD800C531CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3A5E88C117156DD800C531CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3A5E88C417156DD800C531CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		3A5E88C717156DD800C531CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		3A5EC6BC175DD96400F7C140 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		3A6455FE1754C8F200E90FCF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3A6456001754EB8600E90FCF /* contactUSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = contactUSVC.h; path = UI/iPhone/ViewControllers/contactUSVC.h; sourceTree = "<group>"; };
@@ -302,8 +281,6 @@
 		3A987DE51761CBB4006D5750 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3AA5DFE91732A0B80002E657 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Classes/Location.h; sourceTree = "<group>"; };
 		3AA5DFEA1732A0B90002E657 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Classes/Location.m; sourceTree = "<group>"; };
-		3AA717DC178D452B00B2EA1A /* bbeula.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = bbeula.html; sourceTree = "<group>"; };
-		3AA717E0178D671400B2EA1A /* bbeula.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = bbeula.rtf; sourceTree = "<group>"; };
 		3AA717E2178D6E3300B2EA1A /* accept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accept.png; path = UI/iPhone/Resources/images/accept.png; sourceTree = "<group>"; };
 		3AA717E3178D6E3300B2EA1A /* accept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accept@2x.png"; path = "UI/iPhone/Resources/images/accept@2x.png"; sourceTree = "<group>"; };
 		3AB002EF1769D7FC001DACEA /* aboutBB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutBB.png; path = UI/iPhone/Resources/images/aboutBB.png; sourceTree = "<group>"; };
@@ -313,8 +290,6 @@
 		3AB0358C17855BEF0077C0B4 /* app_icon_iphone_high-res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_iphone_high-res.png"; sourceTree = "<group>"; };
 		3AB0359217855E610077C0B4 /* about-harsco@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-harsco@2x.png"; path = "UI/iPhone/Resources/images/about-harsco@2x.png"; sourceTree = "<group>"; };
 		3AB0359417855E9C0077C0B4 /* about-harsco-2-high-res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about-harsco-2-high-res.png"; path = "UI/iPhone/Resources/images/about-harsco-2-high-res.png"; sourceTree = "<group>"; };
-		3AB0359617855F970077C0B4 /* zoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoom.png; path = UI/iPhone/Resources/images/zoom.png; sourceTree = "<group>"; };
-		3AB0359717855F970077C0B4 /* zoom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zoom@2x.png"; path = "UI/iPhone/Resources/images/zoom@2x.png"; sourceTree = "<group>"; };
 		3AB7BEBB1733961A00029A68 /* background_image_iphone_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_image_iphone_lowres.png; path = "UI/iPhone/Resources/images/Low Res/background_image_iphone_lowres.png"; sourceTree = "<group>"; };
 		3AB7BEBF1733961A00029A68 /* launch image_iphone_metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch image_iphone_metal.png"; path = "UI/iPhone/Resources/images/Low Res/launch image_iphone_metal.png"; sourceTree = "<group>"; };
 		3AB7BED31733962900029A68 /* background_image_iphone_lowres@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_image_iphone_lowres@2x.png"; path = "UI/iPhone/Resources/images/High Res/background_image_iphone_lowres@2x.png"; sourceTree = "<group>"; };
@@ -347,7 +322,6 @@
 		3AB89FD9175CB25E00971558 /* DocumentViewerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentViewerVC.h; path = UI/iPhone/ViewControllers/DocumentViewerVC.h; sourceTree = "<group>"; };
 		3AB89FDA175CB26100971558 /* DocumentViewerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentViewerVC.m; path = UI/iPhone/ViewControllers/DocumentViewerVC.m; sourceTree = "<group>"; };
 		3AB89FDE175CB2A000971558 /* DocumentViewerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DocumentViewerVC.xib; path = UI/iPhone/Resources/Nib/DocumentViewerVC.xib; sourceTree = "<group>"; };
-		3AB89FE0175CDAE600971558 /* ProfileGuideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileGuideCell.xib; path = UI/iPhone/Resources/Nib/ProfileGuideCell.xib; sourceTree = "<group>"; };
 		3AB89FE2175CDD5700971558 /* ProfileGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ProfileGuide.pdf; sourceTree = "<group>"; };
 		3ABDA55217748380003654BC /* StoreHoursCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StoreHoursCell.xib; path = UI/iPhone/Resources/Nib/StoreHoursCell.xib; sourceTree = "<group>"; };
 		3ABDA55417748409003654BC /* StoreHoursCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreHoursCell.h; path = UI/iPhone/Views/StoreHoursCell.h; sourceTree = "<group>"; };
@@ -362,13 +336,10 @@
 		3ABDED641744E51C002197B4 /* about us_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about us_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/about us_low@2x.png"; sourceTree = "<group>"; };
 		3ABDED661744E51C002197B4 /* contact us_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact us_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/contact us_low@2x.png"; sourceTree = "<group>"; };
 		3ABDED671744E51C002197B4 /* faq_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "faq_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/faq_low@2x.png"; sourceTree = "<group>"; };
-		3ABDED681744E51C002197B4 /* grid_high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grid_high.png; path = "UI/iPhone/Resources/images/High Res/grid_high.png"; sourceTree = "<group>"; };
 		3ABDED691744E51C002197B4 /* msds_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "msds_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/msds_low@2x.png"; sourceTree = "<group>"; };
 		3ABDED6A1744E51C002197B4 /* products_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "products_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/products_low@2x.png"; sourceTree = "<group>"; };
 		3ABDED6B1744E51C002197B4 /* profile guide_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile guide_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/profile guide_low@2x.png"; sourceTree = "<group>"; };
 		3ABDED6C1744E51C002197B4 /* where to buy_low@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "where to buy_low@2x.png"; path = "UI/iPhone/Resources/images/High Res/where to buy_low@2x.png"; sourceTree = "<group>"; };
-		3ABDED761744E7D9002197B4 /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grid@2x.png"; path = "UI/iPhone/Resources/images/High Res/grid@2x.png"; sourceTree = "<group>"; };
-		3ABDED781744E905002197B4 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grid.png; path = "UI/iPhone/Resources/images/Low Res/grid.png"; sourceTree = "<group>"; };
 		3ABDED7C17451D2F002197B4 /* ProductsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsListVC.h; path = UI/iPhone/ViewControllers/ProductsListVC.h; sourceTree = "<group>"; };
 		3ABDED7D17451D2F002197B4 /* ProductsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsListVC.m; path = UI/iPhone/ViewControllers/ProductsListVC.m; sourceTree = "<group>"; };
 		3ABDED8117451D64002197B4 /* ProductsListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductsListVC.xib; path = UI/iPhone/Resources/Nib/ProductsListVC.xib; sourceTree = "<group>"; };
@@ -438,11 +409,11 @@
 				3AD14948174A67DC001CB67A /* App_ProductsScreenVC.h */,
 				3AD14949174A67DD001CB67A /* App_ProductsScreenVC.m */,
 				3ACDE0F5174BB396009703A2 /* imageFullScreenVC.h */,
-				3ACDE0F6174BB396009703A2 /* imageFullScreenVC.m */,
 				3A6E7A47174CE02100052941 /* locationSearchResultsVC.h */,
 				3A6E7A48174CE02200052941 /* locationSearchResultsVC.m */,
 				3A6DADDD174F449E001959EA /* LocationDetailsVC.h */,
 				3A6DADDE174F449E001959EA /* LocationDetailsVC.m */,
+				3ACDE0F6174BB396009703A2 /* imageFullScreenVC.m */,
 				3A6456001754EB8600E90FCF /* contactUSVC.h */,
 				3A6456011754EB8600E90FCF /* contactUSVC.m */,
 				3A8D876C1755F1380015B704 /* BBOriginalProductInfoVC.h */,
@@ -501,7 +472,6 @@
 				3A255AAB172FB1830042875F /* HomeScreenVC.xib */,
 				3A6E7A4E174CF0D000052941 /* storeResultsTableCell.xib */,
 				3A6DADEC174FA648001959EA /* contactUSCell.xib */,
-				3AB89FE0175CDAE600971558 /* ProfileGuideCell.xib */,
 				3ABDA55217748380003654BC /* StoreHoursCell.xib */,
 			);
 			name = Nib;
@@ -514,10 +484,6 @@
 				3AA717E3178D6E3300B2EA1A /* accept@2x.png */,
 				3A58FF09178BEFEA004CB1A3 /* orangebutton.png */,
 				3A58FF0A178BEFEA004CB1A3 /* orangebutton@2x.png */,
-				3A58FF05178BEA55004CB1A3 /* zoomblue.png */,
-				3A58FF06178BEA55004CB1A3 /* zoomblue@2x.png */,
-				3AB0359617855F970077C0B4 /* zoom.png */,
-				3AB0359717855F970077C0B4 /* zoom@2x.png */,
 				3AB0359417855E9C0077C0B4 /* about-harsco-2-high-res.png */,
 				3AB0359217855E610077C0B4 /* about-harsco@2x.png */,
 				3AB03583178559F60077C0B4 /* back-button.png */,
@@ -525,7 +491,6 @@
 				3A5E26E6176F47D6005DEC7B /* callus.png */,
 				3AB002EF1769D7FC001DACEA /* aboutBB.png */,
 				3A0C10E017676EC000BA7DB3 /* msds_download@2x.png */,
-				3A4EF33F1765B9A3009E165A /* about_harsco.png */,
 				3A4EF3391765B533009E165A /* glass_thumbs.png */,
 				3A4EF33A1765B534009E165A /* iron-thumbs.png */,
 				3A4EF33B1765B534009E165A /* original_thumbs.png */,
@@ -534,7 +499,6 @@
 				3AB89FB9175C7C4500971558 /* black beauty product photo.png */,
 				3AB89FB3175C7A5900971558 /* productsnew.png */,
 				3AB89FB4175C7A5900971558 /* productsnew@2x.png */,
-				3A41191417575B7B006C1B8B /* harsco_banner.jpg */,
 				3A4118FD17573118006C1B8B /* callus@2x.png */,
 				3A4118FE17573118006C1B8B /* emailus.png */,
 				3A4118FF17573118006C1B8B /* emailus@2x.png */,
@@ -626,10 +590,6 @@
 				3A255A9B172FAC830042875F /* UI */,
 				3A5E88B717156DD800C531CA /* AppDelegate.h */,
 				3A5E88B817156DD800C531CA /* AppDelegate.m */,
-				3A5E88C017156DD800C531CA /* ViewController.h */,
-				3A5E88C117156DD800C531CA /* ViewController.m */,
-				3A5E88C317156DD800C531CA /* ViewController_iPhone.xib */,
-				3A5E88C617156DD800C531CA /* ViewController_iPad.xib */,
 				3A5E88AF17156DD800C531CA /* Supporting Files */,
 			);
 			path = BlackBeauty;
@@ -638,9 +598,8 @@
 		3A5E88AF17156DD800C531CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3AA717E0178D671400B2EA1A /* bbeula.rtf */,
-				3AA717DC178D452B00B2EA1A /* bbeula.html */,
-				3A58FF13178C2208004CB1A3 /* location.db */,
+				3A52C986178EFE220090F345 /* location.db */,
+				3A52C984178EE11A0090F345 /* bbeula.rtf */,
 				3A58FF11178BFA3C004CB1A3 /* faq7.html */,
 				3A3B971D17705E50004E9A85 /* BBGLASSSPECS.pdf */,
 				3A3B971E17705E50004E9A85 /* BBIRONSPECS.pdf */,
@@ -681,7 +640,6 @@
 				3A6B16DF17460E9E00D405D3 /* product_coal slag button_low.png */,
 				3A6B16E017460E9E00D405D3 /* product_copper slag button_low.png */,
 				3A6B16E117460E9E00D405D3 /* product_crushed glass button_low.png */,
-				3ABDED781744E905002197B4 /* grid.png */,
 				3ABDED521744E4B2002197B4 /* about us_low.png */,
 				3ABDED541744E4B2002197B4 /* contact us_low.png */,
 				3ABDED551744E4B2002197B4 /* faq_low.png */,
@@ -701,11 +659,9 @@
 				3A6B16E517460EAE00D405D3 /* product_coal slag button_low@2x.png */,
 				3A6B16E617460EAE00D405D3 /* product_copper slag button_low@2x.png */,
 				3A6B16E717460EAE00D405D3 /* product_crushed glass button_low@2x.png */,
-				3ABDED761744E7D9002197B4 /* grid@2x.png */,
 				3ABDED641744E51C002197B4 /* about us_low@2x.png */,
 				3ABDED661744E51C002197B4 /* contact us_low@2x.png */,
 				3ABDED671744E51C002197B4 /* faq_low@2x.png */,
-				3ABDED681744E51C002197B4 /* grid_high.png */,
 				3ABDED691744E51C002197B4 /* msds_low@2x.png */,
 				3ABDED6A1744E51C002197B4 /* products_low@2x.png */,
 				3ABDED6B1744E51C002197B4 /* profile guide_low@2x.png */,
@@ -798,8 +754,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5E88B317156DD800C531CA /* InfoPlist.strings in Resources */,
-				3A5E88C517156DD800C531CA /* ViewController_iPhone.xib in Resources */,
-				3A5E88C817156DD800C531CA /* ViewController_iPad.xib in Resources */,
 				3A255AAC172FB1830042875F /* HomeScreenVC.xib in Resources */,
 				3A255AAF172FB2070042875F /* list_item_bg.png in Resources */,
 				3A255AB0172FB2070042875F /* list_item_bg@2x.png in Resources */,
@@ -820,13 +774,10 @@
 				3ABDED6D1744E51C002197B4 /* about us_low@2x.png in Resources */,
 				3ABDED6F1744E51C002197B4 /* contact us_low@2x.png in Resources */,
 				3ABDED701744E51C002197B4 /* faq_low@2x.png in Resources */,
-				3ABDED711744E51C002197B4 /* grid_high.png in Resources */,
 				3ABDED721744E51C002197B4 /* msds_low@2x.png in Resources */,
 				3ABDED731744E51C002197B4 /* products_low@2x.png in Resources */,
 				3ABDED741744E51C002197B4 /* profile guide_low@2x.png in Resources */,
 				3ABDED751744E51C002197B4 /* where to buy_low@2x.png in Resources */,
-				3ABDED771744E7DA002197B4 /* grid@2x.png in Resources */,
-				3ABDED791744E906002197B4 /* grid.png in Resources */,
 				3ABDED8217451D64002197B4 /* ProductsListVC.xib in Resources */,
 				3A6B16E217460E9E00D405D3 /* product_coal slag button_low.png in Resources */,
 				3A6B16E317460E9E00D405D3 /* product_copper slag button_low.png in Resources */,
@@ -858,7 +809,6 @@
 				3A41191017573118006C1B8B /* msds_download.png in Resources */,
 				3A41191217573118006C1B8B /* viewonmap.png in Resources */,
 				3A41191317573118006C1B8B /* viewonmap@2x.png in Resources */,
-				3A41191517575B7B006C1B8B /* harsco_banner.jpg in Resources */,
 				3A41191C17576C04006C1B8B /* faqDetailsVC.xib in Resources */,
 				3A4119231757824A006C1B8B /* faq1.html in Resources */,
 				3A4119241757824A006C1B8B /* faq2.html in Resources */,
@@ -874,13 +824,11 @@
 				3AB89FC7175C886E00971558 /* MapViewController.xib in Resources */,
 				3AB89FCE175CA02700971558 /* MSDSVC.xib in Resources */,
 				3AB89FDF175CB2A100971558 /* DocumentViewerVC.xib in Resources */,
-				3AB89FE1175CDAE700971558 /* ProfileGuideCell.xib in Resources */,
 				3AB89FE3175CDD5700971558 /* ProfileGuide.pdf in Resources */,
 				3A5EC6BD175DD96400F7C140 /* background.png in Resources */,
 				3A4EF33C1765B534009E165A /* glass_thumbs.png in Resources */,
 				3A4EF33D1765B534009E165A /* iron-thumbs.png in Resources */,
 				3A4EF33E1765B534009E165A /* original_thumbs.png in Resources */,
-				3A4EF3401765B9A3009E165A /* about_harsco.png in Resources */,
 				3A4EF34717660DCF009E165A /* StoreHoursVC.xib in Resources */,
 				3A0C10E117676EC000BA7DB3 /* msds_download@2x.png in Resources */,
 				3AB002F01769D7FC001DACEA /* aboutBB.png in Resources */,
@@ -898,19 +846,14 @@
 				3AB0358D17855BEF0077C0B4 /* app_icon_iphone_high-res.png in Resources */,
 				3AB0359317855E610077C0B4 /* about-harsco@2x.png in Resources */,
 				3AB0359517855E9C0077C0B4 /* about-harsco-2-high-res.png in Resources */,
-				3AB0359817855F970077C0B4 /* zoom.png in Resources */,
-				3AB0359917855F970077C0B4 /* zoom@2x.png in Resources */,
-				3A58FF07178BEA55004CB1A3 /* zoomblue.png in Resources */,
-				3A58FF08178BEA55004CB1A3 /* zoomblue@2x.png in Resources */,
 				3A58FF0B178BEFEA004CB1A3 /* orangebutton.png in Resources */,
 				3A58FF0C178BEFEA004CB1A3 /* orangebutton@2x.png in Resources */,
 				3A58FF12178BFA3C004CB1A3 /* faq7.html in Resources */,
-				3A58FF14178C2208004CB1A3 /* location.db in Resources */,
 				3A58FF1B178C511D004CB1A3 /* EULAVCViewController.xib in Resources */,
-				3AA717DD178D452B00B2EA1A /* bbeula.html in Resources */,
-				3AA717E1178D671400B2EA1A /* bbeula.rtf in Resources */,
 				3AA717E4178D6E3300B2EA1A /* accept.png in Resources */,
 				3AA717E5178D6E3300B2EA1A /* accept@2x.png in Resources */,
+				3A52C985178EE11A0090F345 /* bbeula.rtf in Resources */,
+				3A52C987178EFE220090F345 /* location.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,7 +866,6 @@
 			files = (
 				3A5E88B517156DD800C531CA /* main.m in Sources */,
 				3A5E88B917156DD800C531CA /* AppDelegate.m in Sources */,
-				3A5E88C217156DD800C531CA /* ViewController.m in Sources */,
 				3A255AA9172FB15B0042875F /* HomeScreenVC.m in Sources */,
 				3A255AC0172FCE2B0042875F /* AppStorage.m in Sources */,
 				3A255AC5172FCFC30042875F /* ConstantDefines.m in Sources */,
@@ -972,22 +914,6 @@
 				3A5E88B217156DD800C531CA /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3A5E88C317156DD800C531CA /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A5E88C417156DD800C531CA /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		3A5E88C617156DD800C531CA /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A5E88C717156DD800C531CA /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -13,7 +13,7 @@
 @end
 
 @implementation DocumentViewerVC
-@synthesize documentViewer,loadingIndicator,isProfileGuide,isTOS,isPrivacyPolicy;
+@synthesize documentViewer,loadingIndicator,isProfileGuide,isTOS,isPrivacyPolicy,isSpecifications;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,6 +23,7 @@
         isProfileGuide = NO;
         isTOS = NO;
         isPrivacyPolicy = NO;
+        isSpecifications = NO;
     }
     return self;
 }
@@ -33,7 +34,7 @@
     if(self = [super init])
     {
         filePathToBeRendered = [[NSString alloc] initWithString:filePath];
-        ////NSLog(@"path is %@",filePathToBeRendered);
+        //NSLog(@"path is %@",filePathToBeRendered);
         
     }
     return self;
@@ -46,7 +47,17 @@
     
     if(isProfileGuide)
     {
-        self.title = @"Profile Guide";
+        //self.title = @"Profile Guide";
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"Profile Guide"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+       [self.navigationItem setTitleView:label];
+        [label release];
+        
         UIImage* image = [UIImage imageNamed:@"back-button"];
         CGRect frameimg;
         
@@ -68,7 +79,17 @@
     }
     else if(isTOS)
     {
-        self.title = @"EULA";
+        //self.title = @"EULA";
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:19]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"End User License Agreement"];
+         [label setTextAlignment:NSTextAlignmentCenter];
+       [self.navigationItem setTitleView:label];
+        [label release];
+        
         UIImage* image = [UIImage imageNamed:@"back-button"];
         CGRect frameimg;
         
@@ -90,7 +111,17 @@
     
     else if(isPrivacyPolicy)
     {
-        self.title = @"Privacy Policy";
+        //self.title = @"Privacy Policy";
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"Privacy Policy"];
+         [label setTextAlignment:NSTextAlignmentCenter];
+       [self.navigationItem setTitleView:label];
+        [label release];
+        
         UIImage* image = [UIImage imageNamed:@"back-button"];
         CGRect frameimg;
         
@@ -111,6 +142,69 @@
 
     }
     
+    else if(isSpecifications)
+    {
+        UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(onActionClicked:)];
+        //self.navigationController.navigationBar.topItem.rightBarButtonItem = shareButton;
+        [self.navigationItem setRightBarButtonItem:shareButton];
+        
+        [shareButton release];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"Specifications"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [self.navigationItem setTitleView:label];
+        [label release];
+        
+        
+    }
+    else
+    {
+        UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(onActionClicked:)];
+        //self.navigationController.navigationBar.topItem.rightBarButtonItem = shareButton;
+        [self.navigationItem setRightBarButtonItem:shareButton];
+        [shareButton release];
+        
+       
+        if([[filePathToBeRendered lastPathComponent] isEqualToString:BBORIGINAL])
+        {
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:17]];
+            [label setBackgroundColor:[UIColor clearColor]];
+            [label setTextColor:[UIColor whiteColor]];
+            [label setText:@"MSDS ORIGINAL"];
+            [label setTextAlignment:NSTextAlignmentCenter];
+            [self.navigationItem setTitleView:label];
+            [label release];
+        }
+        else if([[filePathToBeRendered lastPathComponent] isEqualToString:BBGLASS])
+        {
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
+            [label setBackgroundColor:[UIColor clearColor]];
+            [label setTextColor:[UIColor whiteColor]];
+            [label setText:@"MSDS GLASS"];
+            [label setTextAlignment:NSTextAlignmentCenter];
+            [self.navigationItem setTitleView:label];
+            [label release];
+
+        }
+        else
+        {
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
+            [label setBackgroundColor:[UIColor clearColor]];
+            [label setTextColor:[UIColor whiteColor]];
+            [label setText:@"MSDS IRON"];
+            [label setTextAlignment:NSTextAlignmentCenter];
+            [self.navigationItem setTitleView:label];
+            [label release];
+        }
+    }
+    
     [self openFile];
 }
 
@@ -125,31 +219,17 @@
 
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillDisappear:(BOOL)animated
 {
-    if(!isProfileGuide)
-    {
-        if(!isTOS)
-        {
-            if(!isPrivacyPolicy)
-            {
-                UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(onActionClicked:)];
-                self.navigationController.navigationBar.topItem.rightBarButtonItem = shareButton;
-                
-                [shareButton release];
-            }
-        }
-        
-    }
-    
+    [self.documentViewer setDelegate:nil];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 
@@ -167,6 +247,7 @@
 #pragma mark Action Methods
 -(void)onBackClick:(id)sender
 {
+    [self.documentViewer setDelegate:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

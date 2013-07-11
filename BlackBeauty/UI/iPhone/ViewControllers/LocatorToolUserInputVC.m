@@ -49,13 +49,6 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
     self.title = @"Where To Buy";
     
-//    self.headerView.topItem.leftBarButtonItem = backButton;
-    
-    if(IS_RETINA)
-    {
-        //NSLog(@"yes");
-    }
-    
 }
 
 -(void)viewDidUnload
@@ -64,6 +57,19 @@
     self.byUserInputLocationButton = nil;
     self.byUserLocationButton = nil;
   
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"Where To Buy"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
 }
 
 -(void)dealloc

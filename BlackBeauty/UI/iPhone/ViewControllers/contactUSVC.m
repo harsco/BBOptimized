@@ -38,6 +38,15 @@
     
     self.title = @"Contact Us";
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+    [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setText:@"Contact Us"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
+    
     if(!isProducts)
     {
         UIImage* image = [UIImage imageNamed:@"back-button"];

@@ -29,6 +29,7 @@
     if(self = [super init])
     {
         faqToBeShown = [faqObject retain];
+         didShowEmail = NO;
     }
     
     return self;
@@ -39,12 +40,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+   
+    
     [self.faqAnswerView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:faqToBeShown.answer ofType:@"html"]isDirectory:NO]]];
     
     
     
     self.faqQuestion.text = faqToBeShown.question;
-    self.title = @"BLACK BEAUTY® Help";
+    //self.title = @"BLACK BEAUTY® Help";
+    
+    label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"BLACK BEAUTY® Help"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
+    
+    
     
     
 }
@@ -53,8 +67,13 @@
 {
     [super viewWillAppear:YES];
     
-    [self.loadingIndicator setHidden:NO];
-    [self.loadingIndicator startAnimating];
+    if(!didShowEmail)
+    {
+        [self.loadingIndicator setHidden:NO];
+        [self.loadingIndicator startAnimating];
+    }
+        
+   
     
     if([faqToBeShown.question isEqualToString:@"How do I order BLACK BEAUTY abrasives?"])
     {
@@ -91,6 +110,8 @@
    
 }
 
+
+
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:YES];
@@ -125,6 +146,7 @@
 }
 -(IBAction)onEmailUsClicked:(id)sender
 {
+    didShowEmail = YES;
     MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
     
     [mailController setSubject:@"From BLACK BEAUTY® App"];

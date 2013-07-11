@@ -20,6 +20,7 @@
     BOOL isProfileGuide;
     BOOL isTOS;
     BOOL isPrivacyPolicy;
+    BOOL isSpecifications;
 }
 
 @property(nonatomic,retain) IBOutlet UIWebView* documentViewer;
@@ -27,6 +28,7 @@
 @property(nonatomic)BOOL isProfileGuide;
 @property(nonatomic)BOOL isTOS;
 @property(nonatomic)BOOL isPrivacyPolicy;
+@property(nonatomic)BOOL isSpecifications;
 -(id)initWithFilePath:(NSString*)filePath;
 
 @end

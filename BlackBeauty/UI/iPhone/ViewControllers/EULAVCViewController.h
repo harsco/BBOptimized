@@ -14,12 +14,14 @@
     UIWebView* eulaView;
     UIView* acceptView;
     UIButton* acceptButton;
+    UINavigationBar* header;
 }
 
 
 @property(nonatomic,retain)IBOutlet UIWebView* eulaView;
 @property(nonatomic,retain)IBOutlet UIView* acceptView;
 @property(nonatomic,retain)IBOutlet UIButton* acceptButton;
+@property(nonatomic,retain)IBOutlet UINavigationBar* header;
 
 -(IBAction)onEULAButtonClicked:(id)sender;
 

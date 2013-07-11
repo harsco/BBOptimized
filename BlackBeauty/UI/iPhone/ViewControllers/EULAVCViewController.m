@@ -16,6 +16,7 @@
 @synthesize eulaView;
 @synthesize acceptView;
 @synthesize acceptButton;
+@synthesize header;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +45,18 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    
+    //[UIFont fontWithName:@"Arial-BoldMT" size:11];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"End User License Agreement"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.header.topItem setTitleView:label];
+    [label release];
+    
     if(IsRunningTallPhone())
     {
         [self.acceptView setFrame:CGRectMake(0.0, 480.0, 320, 67)];

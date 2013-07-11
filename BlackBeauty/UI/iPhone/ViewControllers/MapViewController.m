@@ -47,7 +47,20 @@
     
     [self.mapView setRegion:newRegion animated:YES];
     
-    self.title = [NSString stringWithFormat:@"%@%@%@",locationToShow.city,@", ",locationToShow.state] ;
+    //self.title = [NSString stringWithFormat:@"%@%@%@",locationToShow.city,@", ",locationToShow.state] ;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:[NSString stringWithFormat:@"%@%@%@",locationToShow.city,@", ",locationToShow.state]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+	[self.navigationItem setTitleView:label];
+	[label release];
+    
+
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated

@@ -21,6 +21,9 @@
     UIImageView* callImage;
     UIImageView* emailImage;
     UIActivityIndicatorView* loadingIndicator;
+    UILabel *label;
+    
+    BOOL didShowEmail;
     
     FAQ* faqToBeShown;
     NSURL* savedLink;

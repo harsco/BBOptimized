@@ -45,7 +45,11 @@
     
     //[self.loadingHours setTitle:[NSString stringWithFormat:@"%@%@",@"Loading Hours: ",location.loadingHours] forState:UIControlStateNormal];
     
-    self.title = location.name;
+    //self.title = location.name;
+    
+    
+    
+    
    // self.hoursSegment addTarget:self action:@selector(segmentAction:) forControlEvents:<#(UIControlEvents)#>
 }
 
@@ -54,6 +58,16 @@
     [super viewWillAppear:YES];
     
     //NSLog(@"loading is %@",location.loadingHours);
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+    [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setText:location.name];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
     
     if(!IsRunningTallPhone())
     {

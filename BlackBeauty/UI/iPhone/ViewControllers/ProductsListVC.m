@@ -48,7 +48,18 @@
     self.navigationController.delegate = self;
    self.navigationController.navigationBar.topItem.leftBarButtonItem = backButton;
    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
-   self.title = @"BLACK BEAUTY® Products";
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"BLACK BEAUTY® Products"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
+    
+   
     
 
 }

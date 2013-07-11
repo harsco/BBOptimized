@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BlackBeauty/UI/iPhone/ViewControllers/locationSearchResultsVC.m"
-         timestampString = "393332213.279652"
+         timestampString = "395242893.968174"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "265"
-         endingLineNumber = "265"
+         startingLineNumber = "263"
+         endingLineNumber = "263"
          landmarkName = "-mapViewDidFailLoadingMap:withError:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BlackBeauty/UI/iPhone/ViewControllers/locationSearchResultsVC.m"
-         timestampString = "393332213.279652"
+         timestampString = "395242893.968174"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "113"
+         endingLineNumber = "113"
          landmarkName = "-dealloc"
          landmarkType = "5">
       </FileBreakpoint>
@@ -40,19 +40,6 @@
          startingLineNumber = "35"
          endingLineNumber = "35"
          landmarkName = "-getResellersNearMYLocation"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "BlackBeauty/UI/iPhone/ViewControllers/LocationDetailsVC.m"
-         timestampString = "395060974.850947"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "320"
-         endingLineNumber = "320"
-         landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

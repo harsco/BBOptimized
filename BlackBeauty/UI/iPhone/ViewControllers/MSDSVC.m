@@ -28,7 +28,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"MSDS";
+   // self.title = @"MSDS";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+    //label alig
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"Material Safety Data Sheets"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+	[self.navigationItem setTitleView:label];
+	[label release];
+    
     UIImage* image = [UIImage imageNamed:@"back-button"];
     CGRect frameimg;
     

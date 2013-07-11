@@ -22,12 +22,16 @@
 {
     IBOutlet UINavigationBar* headerView;
     IBOutlet UIButton* privacyButton;
+    UIButton* tosButton;
+    UILabel* copyRightLabel;
     
     UINavigationController* rootNavigationController;
 }
 
 @property(nonatomic,retain)IBOutlet UINavigationBar* headerView;
 @property(nonatomic,retain)IBOutlet UIButton* privacyButton;
+@property(nonatomic,retain)IBOutlet UIButton* tosButton;
+@property(nonatomic,retain)IBOutlet UILabel* copyRightLabel;
 
 
 //Action methods for different Buttons

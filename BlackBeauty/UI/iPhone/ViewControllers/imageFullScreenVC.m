@@ -53,7 +53,17 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     if(pageTitle)
-        self.header.topItem.title = pageTitle;
+    {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:pageTitle];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [self.header.topItem setTitleView:label];
+        [label release];
+    }
+        //self.header.topItem.title = pageTitle;
 }
 
 -(void)viewDidUnload

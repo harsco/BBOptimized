@@ -28,6 +28,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"About Harsco"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+	[self.aboutUsHeader.topItem setTitleView:label];
+	[label release];
 
 }
 

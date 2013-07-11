@@ -13,7 +13,7 @@
 #import "HomeScreenVC.h"
 #import "EULAVCViewController.h"
 
-@class ViewController;
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

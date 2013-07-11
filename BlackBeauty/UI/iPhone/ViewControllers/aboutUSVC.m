@@ -59,6 +59,16 @@
 {
     [super viewWillAppear:YES];
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(190, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"About Us"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.aboutUsHeader.topItem setTitleView:label];
+    [label release];
+
+    
     if(IsRunningTallPhone())
     {
         [self.backGroundImage setFrame:CGRectMake(0, 0, 320, 568)];

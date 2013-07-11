@@ -41,12 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    if([locationToShow.webSite length])
-    {
-        self.title = locationToShow.webSite;
-    }
-    else
-    self.title = @"Location Details";
+    
     
     self.storeName.text = locationToShow.name;
     self.storeStreet.text = locationToShow.streetAddress;
@@ -59,6 +54,34 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    
+    
+    if([locationToShow.webSite length])
+    {
+        self.title = locationToShow.webSite;
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:locationToShow.webSite];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [self.navigationItem setTitleView:label];
+        [label release];
+    }
+    else
+    {
+        self.title = @"Location Details";
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+        [label setBackgroundColor:[UIColor clearColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"Location Details"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [self.navigationItem setTitleView:label];
+        [label release];
+    }
+
+    
     NSIndexPath *tableSelection = [self.userOptionsTable indexPathForSelectedRow];
     [self.userOptionsTable deselectRowAtIndexPath:tableSelection animated:NO];
     

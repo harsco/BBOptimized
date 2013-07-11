@@ -28,7 +28,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     UIImage* image = [UIImage imageNamed:@"back-button"];
     CGRect frameimg;
     
@@ -43,7 +42,17 @@
      forControlEvents:UIControlEventTouchUpInside];
     [button setShowsTouchWhenHighlighted:YES];
     
-    self.title = @"FAQ";
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+	[label setBackgroundColor:[UIColor clearColor]];
+	[label setTextColor:[UIColor whiteColor]];
+	[label setText:@"Frequently Asked Questions"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
+    
     
     UIBarButtonItem *backButton =[[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
     
@@ -51,12 +60,15 @@
     
     self.navigationController.navigationBar.topItem.leftBarButtonItem = backButton;
     
+
+        
     faqArray = [[NSMutableArray alloc] init];
     [self prepareFAQData];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    
     NSIndexPath *tableSelection = [self.faqListView indexPathForSelectedRow];
     [self.faqListView deselectRowAtIndexPath:tableSelection animated:NO];
     
