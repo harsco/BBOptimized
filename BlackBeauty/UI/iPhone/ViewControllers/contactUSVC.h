@@ -10,6 +10,7 @@
 #import "DefaultTableCell.h"
 #import "LocationManager.h"
 #import "LocationDetailsVC.h"
+#import "contactUSCell.h"
 
 @class App_ProductsScreenVC;
 

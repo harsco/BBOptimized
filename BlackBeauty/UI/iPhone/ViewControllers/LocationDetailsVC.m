@@ -59,7 +59,15 @@
     if([locationToShow.webSite length])
     {
         self.title = locationToShow.webSite;
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+        float labelwidth;
+        if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+            labelwidth = 120;
+        else
+            labelwidth = 120;
+        
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+       // UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
         [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
         [label setBackgroundColor:[UIColor clearColor]];
         [label setTextColor:[UIColor whiteColor]];
@@ -70,12 +78,28 @@
     }
     else
     {
-        self.title = @"Location Details";
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+        
+        float labelwidth;
+        if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+            labelwidth = 220.0;
+        else
+            labelwidth = 120;
+        
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+        //UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
         [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
         [label setBackgroundColor:[UIColor clearColor]];
         [label setTextColor:[UIColor whiteColor]];
-        [label setText:@"Location Details"];
+       
+        if([locationToShow.name isEqualToString:@"HARSCO"])
+             [label setText:[NSString stringWithFormat:@"%@%@%@",locationToShow.state,@",",locationToShow.city]];
+        else
+        {
+            self.title = @"Location Details";
+            [label setText:@"Location Details"];
+        }
+             
         [label setTextAlignment:NSTextAlignmentCenter];
         [self.navigationItem setTitleView:label];
         [label release];

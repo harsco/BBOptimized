@@ -62,6 +62,11 @@
 #define ISIOS5 [UIDevice currentDevice] systemVersion]
 #define SYSTEM_VERSION_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 
+//Coordinates
+
+#define LARGESIZE 280.0
+#define MEDIUMSIZE 250.0
+#define SMALLSIZE 120.0
 
 //Location Errors
 #define LOCATIONACCESSDENIED @"Location Services access denied. Please enable Location Services for the App in Settings"

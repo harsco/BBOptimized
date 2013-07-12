@@ -16,7 +16,7 @@
 @synthesize headerView;
 @synthesize privacyButton;
 @synthesize tosButton;
-@synthesize copyRightLabel;
+@synthesize copyrightLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,8 +43,16 @@
 {
     [super viewWillAppear:YES];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+    float labelwidth;
+    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+        labelwidth = 250.0;
+    else
+        labelwidth = 120;
+
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
 	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+    [label setTextAlignment:NSTextAlignmentCenter];
 	[label setBackgroundColor:[UIColor clearColor]];
 	[label setTextColor:[UIColor whiteColor]];
 	[label setText:@"BLACK BEAUTY® Home"];
@@ -55,7 +63,7 @@
     {
         [self.privacyButton setFrame:CGRectMake(86.0, 500.0, 95, 21)];
         [self.tosButton setFrame:CGRectMake(180.0, 500.0, 77, 21)];
-        [self.copyRightLabel setFrame:CGRectMake(48.0, 477.0, 233, 21)];
+        [self.copyrightLabel setFrame:CGRectMake(48.0, 477.0, 233, 21)];
     }
 }
 

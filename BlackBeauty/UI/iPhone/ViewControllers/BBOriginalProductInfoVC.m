@@ -28,8 +28,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = @"BLACK BEAUTY®";
+    float labelwidth;
+    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+        labelwidth = 200.0;
+    else
+        labelwidth = 120;
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+   // UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
 	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
 	[label setBackgroundColor:[UIColor clearColor]];
 	[label setTextColor:[UIColor whiteColor]];

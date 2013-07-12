@@ -45,18 +45,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
+    float labelwidth;
+    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+        labelwidth = 280.0;
+    else
+        labelwidth = 120;
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+    [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setTextColor:[UIColor whiteColor]];
+    
     if(isProfileGuide)
     {
         //self.title = @"Profile Guide";
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
-        [label setBackgroundColor:[UIColor clearColor]];
-        [label setTextColor:[UIColor whiteColor]];
         [label setText:@"Profile Guide"];
-        [label setTextAlignment:NSTextAlignmentCenter];
-       [self.navigationItem setTitleView:label];
-        [label release];
         
         UIImage* image = [UIImage imageNamed:@"back-button"];
         CGRect frameimg;
@@ -64,7 +70,7 @@
         if(IS_RETINA)
             frameimg = CGRectMake(0, 0, 30, 30);
         else
-            frameimg = CGRectMake(0, 0, 25, 25);
+            frameimg = CGRectMake(0, 0, 20, 20);
         
         UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
         [button setBackgroundImage:image forState:UIControlStateNormal];
@@ -80,23 +86,14 @@
     else if(isTOS)
     {
         //self.title = @"EULA";
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:19]];
-        [label setBackgroundColor:[UIColor clearColor]];
-        [label setTextColor:[UIColor whiteColor]];
         [label setText:@"End User License Agreement"];
-         [label setTextAlignment:NSTextAlignmentCenter];
-       [self.navigationItem setTitleView:label];
-        [label release];
-        
         UIImage* image = [UIImage imageNamed:@"back-button"];
         CGRect frameimg;
         
         if(IS_RETINA)
             frameimg = CGRectMake(0, 0, 30, 30);
         else
-            frameimg = CGRectMake(0, 0, 25, 25);
+            frameimg = CGRectMake(0, 0, 20, 20);
         
         UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
         [button setBackgroundImage:image forState:UIControlStateNormal];
@@ -112,15 +109,8 @@
     else if(isPrivacyPolicy)
     {
         //self.title = @"Privacy Policy";
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
-        [label setBackgroundColor:[UIColor clearColor]];
-        [label setTextColor:[UIColor whiteColor]];
         [label setText:@"Privacy Policy"];
-         [label setTextAlignment:NSTextAlignmentCenter];
-       [self.navigationItem setTitleView:label];
-        [label release];
+         
         
         UIImage* image = [UIImage imageNamed:@"back-button"];
         CGRect frameimg;
@@ -128,7 +118,7 @@
         if(IS_RETINA)
             frameimg = CGRectMake(0, 0, 30, 30);
         else
-            frameimg = CGRectMake(0, 0, 25, 25);
+            frameimg = CGRectMake(0, 0, 20, 20);
         
         UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
         [button setBackgroundImage:image forState:UIControlStateNormal];
@@ -147,18 +137,10 @@
         UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(onActionClicked:)];
         //self.navigationController.navigationBar.topItem.rightBarButtonItem = shareButton;
         [self.navigationItem setRightBarButtonItem:shareButton];
-        
         [shareButton release];
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-        [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
-        [label setBackgroundColor:[UIColor clearColor]];
-        [label setTextColor:[UIColor whiteColor]];
         [label setText:@"Specifications"];
-        [label setTextAlignment:NSTextAlignmentCenter];
-        [self.navigationItem setTitleView:label];
-        [label release];
-        
+                
         
     }
     else
@@ -171,39 +153,25 @@
        
         if([[filePathToBeRendered lastPathComponent] isEqualToString:BBORIGINAL])
         {
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:17]];
-            [label setBackgroundColor:[UIColor clearColor]];
-            [label setTextColor:[UIColor whiteColor]];
             [label setText:@"MSDS ORIGINAL"];
-            [label setTextAlignment:NSTextAlignmentCenter];
-            [self.navigationItem setTitleView:label];
-            [label release];
+            
         }
         else if([[filePathToBeRendered lastPathComponent] isEqualToString:BBGLASS])
         {
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
-            [label setBackgroundColor:[UIColor clearColor]];
-            [label setTextColor:[UIColor whiteColor]];
             [label setText:@"MSDS GLASS"];
-            [label setTextAlignment:NSTextAlignmentCenter];
-            [self.navigationItem setTitleView:label];
-            [label release];
+            
 
         }
         else
         {
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
-            [label setBackgroundColor:[UIColor clearColor]];
-            [label setTextColor:[UIColor whiteColor]];
             [label setText:@"MSDS IRON"];
-            [label setTextAlignment:NSTextAlignmentCenter];
-            [self.navigationItem setTitleView:label];
-            [label release];
+
         }
     }
+    
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [self.navigationItem setTitleView:label];
+    [label release];
     
     [self openFile];
 }
@@ -235,13 +203,15 @@
 
 -(void)openFile
 {
+     NSLog(@"loaded");
     [self.loadingIndicator setHidden:NO];
     [self.loadingIndicator startAnimating];
     
     if(isPrivacyPolicy)
     [self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:filePathToBeRendered]]];
     else
-    [self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePathToBeRendered]]];
+    //[self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePathToBeRendered]]];
+        [self.documentViewer loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePathToBeRendered] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:30.0]];
 }
 
 #pragma mark Action Methods
@@ -313,6 +283,7 @@
 #pragma mark webview delegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    NSLog(@"loaded");
     [self.loadingIndicator stopAnimating];
     [self.loadingIndicator setHidden:YES];
 }

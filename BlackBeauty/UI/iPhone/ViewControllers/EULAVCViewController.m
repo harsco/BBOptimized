@@ -48,7 +48,8 @@
     
     //[UIFont fontWithName:@"Arial-BoldMT" size:11];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,LARGESIZE, 30)];
+    //UILabel *label = [[UILabel alloc] init];
 	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
 	[label setBackgroundColor:[UIColor clearColor]];
 	[label setTextColor:[UIColor whiteColor]];

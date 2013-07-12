@@ -48,8 +48,15 @@
     
     self.faqQuestion.text = faqToBeShown.question;
     //self.title = @"BLACK BEAUTY® Help";
+    float labelwidth;
+    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+        labelwidth = 250.0;
+    else
+        labelwidth = 120;
     
-    label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+    
+    label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+    //label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
 	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
 	[label setBackgroundColor:[UIColor clearColor]];
 	[label setTextColor:[UIColor whiteColor]];

@@ -35,7 +35,7 @@
     if(IS_RETINA)
         frameimg = CGRectMake(0, 0, 30, 30);
     else
-        frameimg = CGRectMake(0, 0, 25, 25);
+        frameimg = CGRectMake(0, 0, 20, 20);
     
     UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
     [button setBackgroundImage:image forState:UIControlStateNormal];
@@ -50,7 +50,15 @@
    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
     
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+    float labelwidth;
+    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+        labelwidth = 280.0;
+    else
+        labelwidth = 120;
+    
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+   // UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, LARGESIZE, 30)];
 	[label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
 	[label setBackgroundColor:[UIColor clearColor]];
 	[label setTextColor:[UIColor whiteColor]];

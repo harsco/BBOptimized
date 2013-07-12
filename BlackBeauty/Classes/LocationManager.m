@@ -161,8 +161,8 @@
         return;
     }
     
-    NSString *latitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
-    NSString *longitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
+   // NSString *latitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
+   // NSString *longitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
     
     //NSLog(@"dLatitude : %@", latitude);
     //NSLog(@"dLongitude : %@",longitude);

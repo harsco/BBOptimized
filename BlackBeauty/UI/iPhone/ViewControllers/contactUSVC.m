@@ -37,8 +37,15 @@
     [locManager release];
     
     self.title = @"Contact Us";
+    float labelwidth;
+    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+        labelwidth = 250.0;
+    else
+        labelwidth = 120;
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, labelwidth, 30)];
+   // UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 120, 30)];
     [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:20]];
     [label setBackgroundColor:[UIColor clearColor]];
     [label setTextColor:[UIColor whiteColor]];
@@ -55,7 +62,7 @@
         if(IS_RETINA)
             frameimg = CGRectMake(0, 0, 30, 30);
         else
-            frameimg = CGRectMake(0, 0, 25, 25);
+            frameimg = CGRectMake(0, 0, 20, 20);
         
         UIButton *button = [[UIButton alloc] initWithFrame:frameimg];
         [button setBackgroundImage:image forState:UIControlStateNormal];
@@ -161,65 +168,118 @@
 
 
 
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//	
+//    
+//    static NSString *CellIdentifier = @"Cell";
+//    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        // Load the top-level objects from the custom cell XIB.
+//        //NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"Default_TableCell" owner:self options:nil];
+//        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+//        //  cell = [topLevelObjects objectAtIndex:0];
+//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"] autorelease];
+//        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        //cell.accessoryView = nil;
+//    }
+//    // Set up the cell...
+//    [self configureCell:cell atIndexPath:indexPath];
+//    
+//    
+//    
+//    return cell;
+//}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-    
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        // Load the top-level objects from the custom cell XIB.
-        //NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"Default_TableCell" owner:self options:nil];
+	static NSString *CellIdentifier = @"Cell";
+	contactUSCell *cell = (contactUSCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		// Load the top-level objects from the custom cell XIB.
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"contactUSCell" owner:self options:nil];
         // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
-        //  cell = [topLevelObjects objectAtIndex:0];
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"] autorelease];
-        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        //cell.accessoryView = nil;
-    }
+        cell = [topLevelObjects objectAtIndex:0];
+		//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		//cell.accessoryView = nil;
+	}
     // Set up the cell...
     [self configureCell:cell atIndexPath:indexPath];
-    
-    
-    
-    return cell;
+	return cell;
 }
 
 
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(contactUSCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    UIImageView* accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(280, 17, 11, 17)];
-    accessoryView.image = [UIImage imageNamed:@"arrow"];
-    [cell addSubview:[accessoryView autorelease]];
+    
+    if(indexPath.row%2 != 0)
+    {
+        //cell.contentView.backgroundColor = [UIColor colorWithRed:221.0/255.0 green:219.0/255.0 blue:209.0/255.0 alpha:1];
+        cell.contentView.backgroundColor = GETTABLECELLBACKGROUND;
+    }
+    else
+    {
+        
+    }
+    
+    [cell.cellLabel setFrame:CGRectMake(17, 14, 199, 21)];
     
     UIView* tempSelectionView = [[UIView alloc] init];
     
     tempSelectionView.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
-    
-    
-  
-    
     [cell setSelectedBackgroundView:[tempSelectionView autorelease]];
     
-    cell.textLabel.text = [[contactLocationsArray objectAtIndex:indexPath.row] city];
+   // cell.textLabel.text = [[contactLocationsArray objectAtIndex:indexPath.row] city];
     
     //cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[[contactLocationsArray objectAtIndex:indexPath.row] city],@", ",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state]] ;
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state],@",",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] city]] ;
+  //  cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state],@",",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] city]] ;
     
-    if(indexPath.row%2 != 0)
-    {
-          //cell.contentView.backgroundColor = [UIColor colorWithRed:221.0/255.0 green:219.0/255.0 blue:209.0/255.0 alpha:1];
-        cell.contentView.backgroundColor = GETTABLECELLBACKGROUND;
-        
-    }
-    else
-    {
-        cell.contentView.backgroundColor = [UIColor whiteColor];
-    }
-    
-        cell.backgroundColor = [UIColor clearColor];
-        [cell setBackgroundView:nil];
+    cell.cellLabel.text = [NSString stringWithFormat:@"%@%@%@",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state],@",",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] city]] ;
 }
+
+//- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    float accessoryCoordinate;
+//    if(SYSTEM_VERSION_EQUAL_TO(SYSTEMVERSION5))
+//         accessoryCoordinate = 180.0;
+//    else
+//        accessoryCoordinate = 120;
+//    
+//    
+//    UIImageView* accessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(accessoryCoordinate, 17, 11, 17)];
+//    accessoryView.image = [UIImage imageNamed:@"arrow"];
+//    [cell addSubview:[accessoryView autorelease]];
+//    
+//    UIView* tempSelectionView = [[UIView alloc] init];
+//    
+//    tempSelectionView.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:132.0/255.0 blue:38.0/255.0 alpha:1];
+//    
+//    
+//  
+//    
+//    [cell setSelectedBackgroundView:[tempSelectionView autorelease]];
+//    
+//    cell.textLabel.text = [[contactLocationsArray objectAtIndex:indexPath.row] city];
+//    
+//    //cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[[contactLocationsArray objectAtIndex:indexPath.row] city],@", ",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state]] ;
+//    
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@%@%@",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] state],@",",[(Location*)[contactLocationsArray objectAtIndex:indexPath.row] city]] ;
+//    
+//    if(indexPath.row%2 != 0)
+//    {
+//          //cell.contentView.backgroundColor = [UIColor colorWithRed:221.0/255.0 green:219.0/255.0 blue:209.0/255.0 alpha:1];
+//        cell.contentView.backgroundColor = GETTABLECELLBACKGROUND;
+//        
+//    }
+//    else
+//    {
+//        cell.contentView.backgroundColor = [UIColor whiteColor];
+//    }
+//    
+//        cell.backgroundColor = [UIColor clearColor];
+//        [cell setBackgroundView:nil];
+//}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

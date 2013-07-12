@@ -146,12 +146,14 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">list_item_bg.png</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="489480393">
-							<int key="type">2</int>
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="621926159">
+							<string key="name">Arial-BoldMT</string>
+							<string key="family">Arial</string>
+							<int key="traits">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="639862690">
-							<string key="NSName">Helvetica-Bold</string>
+						<object class="NSFont" key="IBUIFont" id="130782141">
+							<string key="NSName">Arial-BoldMT</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -172,8 +174,8 @@
 						<reference key="IBUINormalTitleColor" ref="480678661"/>
 						<reference key="IBUINormalTitleShadowColor" ref="580768463"/>
 						<reference key="IBUINormalBackgroundImage" ref="254317438"/>
-						<reference key="IBUIFontDescription" ref="489480393"/>
-						<reference key="IBUIFont" ref="639862690"/>
+						<reference key="IBUIFontDescription" ref="621926159"/>
+						<reference key="IBUIFont" ref="130782141"/>
 					</object>
 					<object class="IBUIImageView" id="300880744">
 						<reference key="NSNextResponder" ref="191373211"/>
